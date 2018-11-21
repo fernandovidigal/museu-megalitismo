@@ -29,8 +29,6 @@ escolaMenuCloseBtn.addEventListener('click', function(){
 });
 
 // READ MORE BUTTONS
-//var museuCompleteTextContainer = document.querySelector('.museu__complete-content');
-
 var museuReadMoreBtn = {
     element: document.querySelector('.museu__read-more'),
     textExpanContainer: document.querySelector('.museu__complete-content'),
