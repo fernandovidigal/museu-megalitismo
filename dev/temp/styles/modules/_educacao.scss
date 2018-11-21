@@ -1,0 +1,115 @@
+.educacao {
+
+    &__nav {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__item {
+        list-style: none;
+        flex-basis: 40%;
+        text-align: center;
+
+        &:last-child {
+            flex-basis: 100%;
+            margin-top: 1rem;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        text-decoration: none;
+        color: $dark-brown;
+        font-size: 2.3rem;
+        font-weight: 500;
+        transition: all .2s;
+
+        &:hover {
+            color: $light-brown;
+            transform: scale(1.1);
+            transform-origin: center bottom;
+        }
+    }
+
+    &__projecto-pedagogico {
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+    }
+
+    &__pp-header {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: $dark-brown;
+    }
+
+    &__pp-titulo {
+        font-size: 1.7rem;
+    }
+}
+
+// MENU ESCOLAS
+.escolas {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    background-color: $light-grey;
+    z-index: 200;
+    transition: left .3s ease-out;
+
+    &__close-icon {
+        cursor: pointer;
+        transform: rotate(0);
+        transition: all .3s;
+
+        &:hover {
+            transform: rotate(180deg) scale(1.2);
+        }
+    }
+
+    &-show {
+        left: 0;
+    }
+
+    &__nav {
+        width: 70%;
+        margin: 5rem auto 0 auto;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__item {
+        list-style: none;
+        
+        &:not(:last-child) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: $dark-brown;
+        font-weight: 700;
+        font-size: 2rem;
+        text-align: center;
+
+        &-small {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+    }
+}

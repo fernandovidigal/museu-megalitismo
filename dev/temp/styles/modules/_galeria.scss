@@ -1,0 +1,21 @@
+.galeria {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    &__image {
+        display: block;
+        width: 100%;
+    }
+
+    &__finger-swipe {
+        width: 3rem;
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        z-index: 100;
+        animation-iteration-count: infinite;
+        animation-duration: 1.5s;
+        animation-name: fingerswipe;
+    }
+}

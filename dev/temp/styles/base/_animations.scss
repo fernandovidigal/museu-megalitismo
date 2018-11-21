@@ -1,0 +1,21 @@
+@keyframes scroll {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 3.5rem);
+    }
+}
+
+@keyframes fingerswipe {
+    0% {
+        transform: translateX(-70%);
+    }
+    50% {
+        transform: translateX(-30%);
+    }
+    100% {
+        transform: translateX(-70%);
+    }
+}

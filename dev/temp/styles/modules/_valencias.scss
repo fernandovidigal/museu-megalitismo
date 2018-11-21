@@ -1,0 +1,40 @@
+.valencias {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    &__item {
+        flex: 0 0 50%;
+        position: relative;
+    }
+
+    &__image {
+        width: 100%;
+        transform: scale(1.1);
+        filter: brightness(40%);
+    }
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 85%;
+        text-align: center;
+        color: $white;
+        transform: translate(-50%, -50%);
+    }
+
+    &__icon {
+        height: 3rem;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 1.6rem;
+        margin-bottom: .5rem;
+    }
+
+    &__description {
+        font-size: 1.2rem;
+    }
+}

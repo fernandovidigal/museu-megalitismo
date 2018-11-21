@@ -1,0 +1,47 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/mobileBG.jpg);
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.logo {
+    width: 18rem;
+    height: auto;
+    padding-top: 2rem;
+    padding-left: 2rem;
+
+    &--menu {
+        width: 35%;
+    }
+}
+
+.scroll-icon,
+.scroll-icon::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll-icon {
+    width: 3.5rem;
+    height: 6rem;
+    bottom: 8vh;
+    margin-top: -35px;
+    box-shadow: inset 0 0 0 1px $white;
+    border-radius: 25px;
+
+    &::before {
+        content: '';
+        width: .8rem;
+        height: .8rem;
+        background: $white;
+        top: .7rem;
+        left: 50%;
+        border-radius: 50%;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+        animation-name: scroll;
+    }
+}

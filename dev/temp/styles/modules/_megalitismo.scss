@@ -1,0 +1,21 @@
+.megalitismo {
+    position: relative;
+    overflow: hidden;
+
+    &__complete-content {
+        height: 0;
+        overflow: hidden;
+        transition: height .3s;
+    }
+}
+
+.triangle {
+    background-color: rgba($light-grey, .4);
+    position: absolute;
+    top: -90%;
+    left: 135%;
+    width: 253rem;
+    height: 253rem;
+    transform: rotate(45deg);
+    z-index: -1;
+}

@@ -1,0 +1,24 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    padding: 0 2rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+
+    &-primary {
+        border: solid 1px $dark-brown;
+        color: $dark-brown;
+    }
+
+    &-secondary {
+        background-color: $dark-brown;
+        color: $white;
+    }
+}
+
+.btn-box {
+    display: flex;
+    margin-top: 3rem;
+}

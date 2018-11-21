@@ -1,0 +1,32 @@
+{
+  "name": "museu-megalitismo",
+  "version": "1.0.0",
+  "description": "Museu Interactivo do Megalitismo",
+  "author": "Fernando Vidigal",
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "swiper": "^4.4.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "autoprefixer": "^9.3.1",
+    "babel-loader": "^8.0.4",
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-modernizr": "^3.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rev": "^9.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp-usemin": "^0.3.29",
+    "gulp-watch": "^5.0.1",
+    "node-sass": "^4.10.0",
+    "postcss-import": "^12.0.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
