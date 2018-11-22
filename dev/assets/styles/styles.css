@@ -589,6 +589,11 @@ body {
   margin-top: 5rem;
   font-weight: 700; }
 
+.heading-postais {
+  font-size: 1.8rem;
+  margin-bottom: 2.4rem;
+  color: #60504D; }
+
 .paragraph {
   font-size: 1.3rem;
   text-align: justify; }
@@ -612,11 +617,23 @@ html {
 body {
   box-sizing: border-box; }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000; }
+
 .u-margin-left-xs {
   margin-left: 1rem !important; }
 
 .u-margin-left-s {
   margin-left: 3rem !important; }
+
+.u-margin-bottom-s {
+  margin-bottom: 1rem !important; }
 
 .u-margin-bottom-sm {
   margin-bottom: 4.5rem !important; }
@@ -631,6 +648,14 @@ body {
   position: absolute;
   top: 2.5rem;
   right: 3rem; }
+
+.u-p-top-right-s {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem; }
+
+.modal-open {
+  overflow: hidden; }
 
 @-webkit-keyframes scroll {
   0% {
@@ -843,6 +868,10 @@ body {
     margin-left: 1rem;
     margin-right: 1rem; }
 
+.btn-modal-postais {
+    background-color: #60504D;
+    color: #FFFFFF; }
+
 .btn-box {
   display: flex;
   margin-top: 3rem; }
@@ -970,6 +999,25 @@ body {
 .postais__tag {
   font-weight: 300;
   font-size: 1.5rem; }
+
+.postais__modal-description {
+  position: fixed;
+  height: 90vh;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #FFFFFF; }
+
+.postais__modal-content {
+  width: 90%;
+  height: 80%;
+  margin: 6rem auto;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
 
 .educacao__nav {
   width: 95%;

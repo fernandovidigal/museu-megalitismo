@@ -1,6 +1,7 @@
 .u-margin-left-xs { margin-left: 1rem !important; }
 .u-margin-left-s { margin-left: 3rem !important; }
 
+.u-margin-bottom-s { margin-bottom: 1rem !important; }
 .u-margin-bottom-sm { margin-bottom: 4.5rem !important; }
 
 .u-margin-top-sm { margin-top: 4rem !important; }
@@ -16,4 +17,14 @@
     position: absolute;
     top: 2.5rem;
     right: 3rem;
+}
+
+.u-p-top-right-s {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+.modal-open {
+    overflow: hidden;
 }
