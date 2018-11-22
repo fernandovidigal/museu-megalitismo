@@ -9,34 +9,8 @@
         text-align: center;
         background: #fff;
         /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
         display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
         justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
         align-items: center;
-      }
-
-      &__figure {
-          display: block;
-          width: 100%;
-
-          &-image {
-              display: block;
-              width: 100%;
-          }
-
-          &-title {
-              background-color: rgba($light-brown, .6);
-              color: $dark-brown;
-              font-size: 1.5rem;
-              line-height: 2;
-          }
-      }
+    }
 }

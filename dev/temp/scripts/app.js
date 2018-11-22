@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 
-var megalitismoSlider = new Swiper ('.megalitismo-swiper', {
+var megalitismoSlider = new Swiper ('.postais-swiper', {
     loop: true
 });
 

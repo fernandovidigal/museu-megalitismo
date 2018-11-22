@@ -16,6 +16,13 @@
         background-color: $dark-brown;
         color: $white;
     }
+
+    &-postais {
+        border: solid 1px $white;
+        color: inherit;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
 
 .btn-box {
