@@ -15,7 +15,7 @@ body {
     box-sizing: border-box;
 }
 
-.overlay {
+.modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -23,4 +23,23 @@ body {
     bottom: 0;
     background-color: rgba($black, .8);
     z-index: 1000;
+    display: none;
+
+    &__content {
+        position: fixed;
+        height: 90vh;
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $white;
+    }
+
+    &-show {
+        display: block;
+    }
+
+    &-open {
+        overflow: hidden;
+    }
 }

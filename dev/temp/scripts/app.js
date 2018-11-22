@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import Modal from './modules/Modal';
 
 var megalitismoSlider = new Swiper ('.postais-swiper', {
     loop: true,
@@ -26,7 +27,6 @@ var megalitismoSlider = new Swiper ('.postais-swiper', {
     }
 });
 
-
 var galeriaSlider = new Swiper ('.galeria-swiper', {
     slidesPerView: 3,
     slidesPerColumn: 3,
@@ -36,6 +36,34 @@ var galeriaSlider = new Swiper ('.galeria-swiper', {
         }
     }
 });
+
+// POSTAIS
+var descricaoBtns = document.querySelectorAll('.btn-postais-descricao');
+
+descricaoBtns.forEach(function(btn, i){
+    btn.addEventListener('click', function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        var modal = new Modal();
+        modal.openModal();
+    });
+});
+
+function showModal() {
+    var modal = document.querySelector('.modal');
+    var body = document.querySelector('body');
+
+    modal.classList.toggle('modal-show');
+    body.classList.toggle('modal-open');
+}
+
+
+
+
+
+
+
+
 
 // Menu Escolas
 var escolasMenuTrigger = document.querySelectorAll('.educacao__link')[0];

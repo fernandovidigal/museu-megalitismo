@@ -617,14 +617,31 @@ html {
 body {
   box-sizing: border-box; }
 
-.overlay {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1000; }
+  z-index: 1000;
+  display: none; }
+
+.modal__content {
+    position: fixed;
+    height: 90vh;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: #FFFFFF; }
+
+.modal-show {
+    display: block; }
+
+.modal-open {
+    overflow: hidden; }
 
 .u-margin-left-xs {
   margin-left: 1rem !important; }
@@ -641,6 +658,9 @@ body {
 .u-margin-top-sm {
   margin-top: 4rem !important; }
 
+.u-margin-top-m {
+  margin-top: 6rem !important; }
+
 .u--flex-column {
   flex-direction: column; }
 
@@ -653,9 +673,6 @@ body {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem; }
-
-.modal-open {
-  overflow: hidden; }
 
 @-webkit-keyframes scroll {
   0% {
@@ -889,7 +906,8 @@ body {
     background-image: url(../images/icons/pdf.svg); }
 
 .icon--close {
-    background-image: url(../images/icons/close.svg); }
+    background-image: url(../images/icons/close.svg);
+    cursor: pointer; }
 
 .museu__complete-content {
   height: 0;
@@ -1000,16 +1018,6 @@ body {
   font-weight: 300;
   font-size: 1.5rem; }
 
-.postais__modal-description {
-  position: fixed;
-  height: 90vh;
-  width: 90%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: #FFFFFF; }
-
 .postais__modal-content {
   width: 90%;
   height: 80%;
@@ -1076,7 +1084,6 @@ body {
   transition: left .3s ease-out; }
 
 .escolas__close-icon {
-    cursor: pointer;
     -webkit-transform: rotate(0);
             transform: rotate(0);
     transition: all .3s; }

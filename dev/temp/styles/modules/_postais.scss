@@ -56,17 +56,7 @@
     }
 
     // MODAL
-    &__modal-description {
-        position: fixed;
-        height: 90vh;
-        width: 90%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: $white;
-    }
-
-    &__modal-content {
+    &__modal-content{
         width: 90%;
         height: 80%;
         margin: 6rem auto;
