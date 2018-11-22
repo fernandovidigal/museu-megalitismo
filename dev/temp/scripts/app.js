@@ -2,6 +2,18 @@ import Swiper from 'swiper';
 
 var megalitismoSlider = new Swiper ('.postais-swiper', {
     loop: true
+    /*on: {
+        click: function(){
+            //var activeSlider = document.querySelector('.swiper-slide-active');
+            //document.querySelector('.swiper-slide-active > .postais__figure > .postais__figure-title').style.display = 'none';
+            //console.log(activeSlider);
+        }
+    }*/
+});
+
+var megalitismoSlides = document.querySelectorAll('.postais-swiper > .swiper-wrapper > .swiper-slide');
+megalitismoSlides.forEach(function(slide, index){
+    
 });
 
 var galeriaSlider = new Swiper ('.galeria-swiper', {

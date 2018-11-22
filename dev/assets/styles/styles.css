@@ -955,7 +955,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  display: none; }
 
 .postais__heading {
   font-weight: 700;
