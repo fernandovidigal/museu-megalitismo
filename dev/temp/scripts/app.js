@@ -1,20 +1,31 @@
 import Swiper from 'swiper';
 
 var megalitismoSlider = new Swiper ('.postais-swiper', {
-    loop: true
-    /*on: {
+    loop: true,
+    on: {
         click: function(){
-            //var activeSlider = document.querySelector('.swiper-slide-active');
-            //document.querySelector('.swiper-slide-active > .postais__figure > .postais__figure-title').style.display = 'none';
-            //console.log(activeSlider);
+            var activeSlider = megalitismoSlider.slides[megalitismoSlider.activeIndex];
+            activeSlider.querySelector('.postais__figure > .postais__figure-title').classList.toggle('postais__figure-title--show');
+            activeSlider.querySelector('.postais__info').classList.toggle('postais__info--show');
+        },
+        slideChangeTransitionEnd: function(){
+            if(megalitismoSlider) {
+                var previousSlider = megalitismoSlider.slides[megalitismoSlider.previousIndex];
+                var previousSliderTitle = previousSlider.querySelector('.postais__figure > .postais__figure-title');
+                var previousSliderInfo = previousSlider.querySelector('.postais__info');
+
+                if(!previousSliderTitle.classList.contains('postais__figure-title--show')) {
+                    previousSliderTitle.classList.toggle('postais__figure-title--show');
+                }
+
+                if(previousSliderInfo.classList.contains('postais__info--show')) {
+                    previousSliderInfo.classList.toggle('postais__info--show');
+                }
+            }
         }
-    }*/
+    }
 });
 
-var megalitismoSlides = document.querySelectorAll('.postais-swiper > .swiper-wrapper > .swiper-slide');
-megalitismoSlides.forEach(function(slide, index){
-    
-});
 
 var galeriaSlider = new Swiper ('.galeria-swiper', {
     slidesPerView: 3,

@@ -19,7 +19,11 @@
             bottom: 0;
             left: 0;
             right: 0;
-            display: block;
+            display: none;
+
+            &--show {
+                display: block;
+            }
         }
     }
 
@@ -30,12 +34,15 @@
         left: 0;
         right: 0;
         background-color: rgba($black, .7);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: $white;
         display: none;
+        color: $white;
+
+        &--show {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__heading {
