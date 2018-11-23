@@ -1,5 +1,7 @@
 import Swiper from 'swiper';
 import Modal from './modules/Modal';
+import Readmore from './modules/Readmore';
+import Educacao from './modules/Educacao';
 
 var megalitismoSlider = new Swiper ('.postais-swiper', {
     loop: true,
@@ -40,7 +42,7 @@ var galeriaSlider = new Swiper ('.galeria-swiper', {
 // POSTAIS
 var descricaoBtns = document.querySelectorAll('.btn-postais-descricao');
 
-descricaoBtns.forEach(function(btn, i){
+descricaoBtns.forEach(function(btn){
     btn.addEventListener('click', function(e){
         e.stopPropagation();
         e.preventDefault();
@@ -49,64 +51,10 @@ descricaoBtns.forEach(function(btn, i){
     });
 });
 
-function showModal() {
-    var modal = document.querySelector('.modal');
-    var body = document.querySelector('body');
-
-    modal.classList.toggle('modal-show');
-    body.classList.toggle('modal-open');
-}
+// MENU ESCOLAS
+var educacao = new Educacao();
 
 
-
-
-
-
-
-
-
-// Menu Escolas
-var escolasMenuTrigger = document.querySelectorAll('.educacao__link')[0];
-var escolasMenu = document.getElementsByClassName('escolas')[0];
-var escolaMenuCloseBtn = document.getElementsByClassName('escolas__close-icon')[0];
-
-escolasMenuTrigger.addEventListener('click', function(e){
-    e.preventDefault();
-    escolasMenu.classList.toggle('escolas-show');
-});
-
-escolaMenuCloseBtn.addEventListener('click', function(){
-    escolasMenu.classList.toggle('escolas-show');
-});
-
-// READ MORE BUTTONS
-var museuReadMoreBtn = {
-    element: document.querySelector('.museu__read-more'),
-    textExpanContainer: document.querySelector('.museu__complete-content'),
-    openState: false
-}
-
-var megalitismoReadMoreBtn = {
-    element: document.querySelector('.megalitismo__read-more'),
-    textExpanContainer: document.querySelector('.megalitismo__complete-content'),
-    openState: false
-}
-
-readMoreExpand(museuReadMoreBtn);
-readMoreExpand(megalitismoReadMoreBtn);
-
-
-function readMoreExpand(readMoreBtn){
-    readMoreBtn.element.addEventListener('click', function(e){
-        e.preventDefault();
-        if(readMoreBtn.openState) {
-            readMoreBtn.textExpanContainer.style.height = '0';
-            readMoreBtn.openState = false;
-            readMoreBtn.element.innerHTML = "LER MAIS"; 
-        } else {
-            readMoreBtn.textExpanContainer.style.height = readMoreBtn.textExpanContainer.scrollHeight+'px';
-            readMoreBtn.openState = true;
-            readMoreBtn.element.innerHTML = "LER MENOS";
-        }
-    });
-}
+// READ MORE BUTTONS HANDLE
+var museuReadMoreBtn = new Readmore('museu');
+var megalitismoReadMoreBtn = new Readmore('megalitismo');
