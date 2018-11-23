@@ -48,6 +48,7 @@ descricaoBtns.forEach(function(btn){
         e.preventDefault();
         var modal = new Modal();
         modal.openModal();
+        modal.loadPage(btn.getAttribute('data-pagename'));
     });
 });
 

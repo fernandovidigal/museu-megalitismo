@@ -2,6 +2,8 @@ class Modal {
 
     constructor(){
         this.modal = document.querySelector('.modal');
+        this.modalWrapper = document.querySelector('.modal__wrapper');
+        this.modalContent = document.querySelector('.modal__content');
         this.pageBody = document.querySelector('body');
         this.closeBtn = document.querySelector('.modal-close');
         this.events();
@@ -13,6 +15,9 @@ class Modal {
 
         // Pushes ESC Key
         document.addEventListener('keyup', this.keyPressHandler.bind(this));
+
+        // Carregar na parte preta
+        this.modal.addEventListener('click', this.closeModal.bind(this));
     }
 
     openModal() {
@@ -29,6 +34,27 @@ class Modal {
         if(e.keyCode == 27) {
             this.closeModal();
         }
+    }
+
+    loadPage(page) {
+        // Criar o Loading spinner
+        var loader = document.createElement('div');
+        loader.setAttribute('class', 'loader');
+        this.modalContent.appendChild(loader);
+
+        // Faz o pedido para carregar a página
+        var xhttp = new XMLHttpRequest();
+        var that = this;
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                that.modalContent.innerHTML = this.responseText;
+            }
+        };
+        xhttp.onerror = function(err){
+            console.log(err);
+        }
+        xhttp.open("GET", "./data/postais/" + page + ".html", true);
+        xhttp.send();
     }
 }
 

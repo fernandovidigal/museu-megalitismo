@@ -15,5 +15,11 @@
     &--close {
         background-image: url(../images/icons/close.svg);
         cursor: pointer;
+        transform: rotate(0);
+        transition: all .3s;
+
+        &:hover {
+            transform: rotate(180deg);
+        }
     }
 }

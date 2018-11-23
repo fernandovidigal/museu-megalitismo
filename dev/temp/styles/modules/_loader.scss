@@ -1,0 +1,38 @@
+.loader {
+
+    &,
+    &:before,
+    &::after {
+        border-radius: 50%;
+        width: 1.5em;
+        height: 1.5em;
+        animation-fill-mode: both;
+        animation: loaderSpinner 1.8s infinite ease-in-out;
+    }
+
+    & {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $dark-brown;
+        font-size: 1.2rem;
+        animation-delay: -0.16s;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+    }
+
+    &:before {
+        left: -3rem;
+        animation-delay: -0.32s;
+    }
+    &:after {
+        left: 3rem;
+    }
+}
+
