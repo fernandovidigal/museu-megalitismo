@@ -821,8 +821,8 @@ body {
           transform: translateX(-50%); }
 
 .scroll-icon {
-  width: 3.5rem;
-  height: 6rem;
+  width: 2.5rem;
+  height: 4.5rem;
   bottom: 8vh;
   margin-top: -35px;
   box-shadow: inset 0 0 0 1px #FFFFFF;
@@ -830,8 +830,8 @@ body {
 
 .scroll-icon::before {
     content: '';
-    width: .8rem;
-    height: .8rem;
+    width: .6rem;
+    height: .6rem;
     background: #FFFFFF;
     top: .7rem;
     left: 50%;
@@ -924,12 +924,15 @@ body {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    background-color: #FFFFFF; }
+    background-color: #FFFFFF;
+    z-index: 1010;
+    padding-top: 6rem;
+    padding-bottom: 2rem; }
 
 .modal__content {
     width: 90%;
-    height: 85%;
-    margin: 6rem auto;
+    height: 100%;
+    margin: 0 auto;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;

@@ -16,12 +16,15 @@
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: $white;
+        z-index: 1010;
+        padding-top: 6rem;
+        padding-bottom: 2rem;
     }
 
     &__content {
         width: 90%;
-        height: 85%;
-        margin: 6rem auto;
+        height: 100%;
+        margin: 0 auto;
         overflow-y: scroll;
         display: flex;
         flex-direction: column;

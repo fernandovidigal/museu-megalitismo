@@ -25,7 +25,7 @@ class Modal {
         this.pageBody.classList.add('modal-open');
     }
 
-    closeModal() {
+    closeModal(e) {
         this.modal.classList.remove('modal-show');
         this.pageBody.classList.remove('modal-open');
     }
