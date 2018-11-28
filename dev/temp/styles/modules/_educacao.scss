@@ -71,20 +71,22 @@
 
     &__nav {
         width: 70%;
-        margin: 5rem auto 0 auto;
+        margin: 4rem auto 0 auto;
     }
 
     &__list {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
+        height: 50vh;
     }
 
     &__item {
         list-style: none;
         
         &:not(:last-child) {
-            margin-bottom: 4rem;
+            margin-bottom: 5vh;
         }
     }
 
