@@ -59,3 +59,67 @@ var educacao = new Educacao();
 // READ MORE BUTTONS HANDLE
 var museuReadMoreBtn = new Readmore('museu');
 var megalitismoReadMoreBtn = new Readmore('megalitismo');
+
+function initMap() {
+    
+    var uluru = {lat: 38.946870, lng: -8.161086};
+    var map = new google.maps.Map(document.querySelector('.contactos__mapa'), {
+        zoom: 16,
+        center: uluru,
+        styles: [
+            {
+              "featureType": "poi",
+              "elementType": "labels.text",
+              "stylers": [
+                {
+                  "visibility": "off"
+                }
+              ]
+            },
+            {
+              "featureType": "poi.business",
+              "stylers": [
+                {
+                  "visibility": "off"
+                }
+              ]
+            },
+            {
+              "featureType": "road",
+              "elementType": "labels.icon",
+              "stylers": [
+                {
+                  "visibility": "off"
+                }
+              ]
+            },
+            {
+              "featureType": "transit",
+              "stylers": [
+                {
+                  "visibility": "off"
+                }
+              ]
+            }
+        ],
+        scrollwheel: false,
+        mapTypeControl: false,
+        zoomControl: true,
+        zoomControlOptions: {
+            position: google.maps.ControlPosition.RIGHT_BOTTOM
+        },
+        streetViewControl: false,
+        //scaleControl: false,
+        fullscreenControl: false
+    });
+    map.setCenter({lat: 38.946870, lng: -8.161086});
+    var marker = new google.maps.Marker({
+      position: uluru,
+      icon:'/assets/images/mapMarker.png',
+      map: map,
+      animation: google.maps.Animation.DROP
+    });
+}
+
+initMap();
+
