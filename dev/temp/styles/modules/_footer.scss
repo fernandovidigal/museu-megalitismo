@@ -1,0 +1,35 @@
+.footer {
+    background-color: $dark;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__logo{
+        display: block;
+        width: 6rem;
+    }
+
+    &__text {
+        color: $white;
+        font-size: 1.8rem;
+        text-decoration: none;
+    }
+
+    &__social {
+
+        &--facebook {
+            display: inline-block;
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+    }
+
+    &__fluviario {
+        display: block;
+        width: 11rem;
+        height: auto;
+    }
+}

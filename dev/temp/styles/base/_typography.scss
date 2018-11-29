@@ -14,8 +14,8 @@ body {
 
     &::before {
         content: attr(data-section-title);
-        color: rgba($light-grey, $alpha: .3);
-        font-size: 7rem;
+        color: rgba($light-grey, $alpha: .25);
+        font-size: 6.1rem;
         display: block;
         position: absolute;
         top: -60%;
@@ -23,6 +23,12 @@ body {
         right: 0;
         z-index: -1;
     }
+}
+
+.heading-secondary {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: $dark-brown;
 }
 
 .heading-tertiary {
@@ -34,6 +40,12 @@ body {
     border-bottom: solid 1px $light-brown;
     margin-top: 4rem;
     font-weight: 700;
+}
+
+.sub-heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $light-brown;
 }
 
 .heading-postais {
@@ -54,4 +66,12 @@ body {
     &__strong {
         font-weight: 700;
     }
+}
+
+.extraInfo-small {
+    font-weight: 300;
+}
+
+.p-bold {
+    font-weight: 700;
 }

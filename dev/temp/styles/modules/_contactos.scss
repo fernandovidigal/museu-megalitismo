@@ -1,0 +1,27 @@
+.contactos {
+
+    &__form {
+        width: 32rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__nome,
+    &__email,
+    &__message {
+        border: solid 1px $dark-brown;
+        font-size: 1.5rem;
+        color: $dark-brown;
+        padding: .8rem 1.2rem;
+        margin-bottom: 1.5rem;
+
+        &::placeholder {
+            color: $light-brown;
+        }
+    }
+
+    &__submit {
+        align-self: flex-start;
+    }
+}

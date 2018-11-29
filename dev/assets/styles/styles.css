@@ -570,14 +570,19 @@ body {
 
 .heading-primary::before {
     content: attr(data-section-title);
-    color: rgba(235, 236, 231, 0.3);
-    font-size: 7rem;
+    color: rgba(235, 236, 231, 0.25);
+    font-size: 6.1rem;
     display: block;
     position: absolute;
     top: -60%;
     left: 0;
     right: 0;
     z-index: -1; }
+
+.heading-secondary {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #60504D; }
 
 .heading-tertiary {
   font-size: 2.6rem;
@@ -588,6 +593,11 @@ body {
   border-bottom: solid 1px #AE9C8D;
   margin-top: 4rem;
   font-weight: 700; }
+
+.sub-heading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #AE9C8D; }
 
 .heading-postais {
   font-size: 1.8rem;
@@ -603,6 +613,12 @@ body {
 
 .paragraph__strong {
     font-weight: 700; }
+
+.extraInfo-small {
+  font-weight: 300; }
+
+.p-bold {
+  font-weight: 700; }
 
 *,
 *::after,
@@ -623,8 +639,11 @@ body {
 .u-margin-left-s {
   margin-left: 3rem !important; }
 
-.u-margin-bottom-s {
+.u-margin-bottom-xs {
   margin-bottom: 1rem !important; }
+
+.u-margin-bottom-s {
+  margin-bottom: 3rem !important; }
 
 .u-margin-bottom-sm {
   margin-bottom: 4.5rem !important; }
@@ -647,6 +666,20 @@ body {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem; }
+
+.u-border-bottom-lb {
+  border-bottom: solid 1px #AE9C8D; }
+
+.u-remove-top-offset {
+  top: 0 !important; }
+
+.u-bgcolor-dark-brown {
+  background-color: #60504D !important;
+  color: #FFFFFF; }
+
+.u-bgcolor-white {
+  background-color: #FFFFFF !important;
+  color: #60504D; }
 
 @-webkit-keyframes scroll {
   0% {
@@ -1220,6 +1253,58 @@ body {
 .horario__info--encerramento {
       font-size: 1.6rem; }
 
+.precario__conjunto {
+  background-color: #EBECE7; }
+
+.precario__table {
+  margin: 0 auto;
+  position: relative;
+  border-spacing: 1px; }
+
+.precario__table-caption {
+    position: absolute;
+    left: 0;
+    top: -1.5rem;
+    font-size: 1.9rem;
+    font-weight: 500; }
+
+.precario__table-header-row {
+    font-size: 1.2rem; }
+
+.precario__table-row {
+    background-color: #EBECE7; }
+
+.precario__table-row:nth-child(odd) {
+      background-color: #AE9C8D;
+      color: #FFFFFF; }
+
+.precario__table-cell {
+    width: 7.5rem;
+    height: 3.3rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1;
+    padding-top: .6rem;
+    padding-bottom: .6rem; }
+
+.precario__table-cell:first-child {
+      width: 18rem;
+      text-align: left;
+      padding-left: .6rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border-left: none; }
+
+.precario__table-cell--column-title {
+      padding: 0;
+      padding-top: .6rem;
+      height: 2.8rem; }
+
+.precario__table-extraInfo {
+    font-weight: 500;
+    padding-top: .5rem; }
+
 .swiper__container {
   width: 100%;
   height: auto; }
@@ -1253,3 +1338,58 @@ body {
             animation-duration: 1.5s;
     -webkit-animation-name: fingerswipe;
             animation-name: fingerswipe; }
+
+.contactos__form {
+  width: 32rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+.contactos__nome, .contactos__email, .contactos__message {
+  border: solid 1px #60504D;
+  font-size: 1.5rem;
+  color: #60504D;
+  padding: .8rem 1.2rem;
+  margin-bottom: 1.5rem; }
+
+.contactos__nome::-webkit-input-placeholder, .contactos__email::-webkit-input-placeholder, .contactos__message::-webkit-input-placeholder {
+    color: #AE9C8D; }
+
+.contactos__nome:-ms-input-placeholder, .contactos__email:-ms-input-placeholder, .contactos__message:-ms-input-placeholder {
+    color: #AE9C8D; }
+
+.contactos__nome::-ms-input-placeholder, .contactos__email::-ms-input-placeholder, .contactos__message::-ms-input-placeholder {
+    color: #AE9C8D; }
+
+.contactos__nome::placeholder, .contactos__email::placeholder, .contactos__message::placeholder {
+    color: #AE9C8D; }
+
+.contactos__submit {
+  align-self: flex-start; }
+
+.footer {
+  background-color: #4C4845; }
+
+.footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+.footer__logo {
+    display: block;
+    width: 6rem; }
+
+.footer__text {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    text-decoration: none; }
+
+.footer__social--facebook {
+    display: inline-block;
+    width: 2.8rem;
+    height: 2.8rem; }
+
+.footer__fluviario {
+    display: block;
+    width: 11rem;
+    height: auto; }

@@ -1,13 +1,12 @@
 .u-margin-left-xs { margin-left: 1rem !important; }
 .u-margin-left-s { margin-left: 3rem !important; }
 
-.u-margin-bottom-s { margin-bottom: 1rem !important; }
+.u-margin-bottom-xs { margin-bottom: 1rem !important; }
+.u-margin-bottom-s { margin-bottom: 3rem !important; }
 .u-margin-bottom-sm { margin-bottom: 4.5rem !important; }
 
 .u-margin-top-sm { margin-top: 4rem !important; }
 .u-margin-top-m { margin-top: 6rem !important; }
-
-
 
 
 .u--flex-column {
@@ -24,4 +23,22 @@
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
+}
+
+.u-border-bottom-lb {
+    border-bottom: solid 1px $light-brown;
+}
+
+.u-remove-top-offset {
+    top: 0 !important;
+}
+
+.u-bgcolor-dark-brown {
+    background-color: $dark-brown !important;
+    color: $white;
+}
+
+.u-bgcolor-white {
+    background-color: $white !important;
+    color: $dark-brown;
 }

@@ -1,0 +1,64 @@
+.precario {
+
+    &__conjunto {
+        background-color: $light-grey;
+    }
+
+    &__table {
+        margin: 0 auto;
+        position: relative;
+        border-spacing: 1px;
+
+        &-caption {
+            position: absolute;
+            left: 0;
+            top: -1.5rem;
+            font-size: 1.9rem;
+            font-weight: 500;
+        }
+
+        &-header-row {
+            font-size: 1.2rem;
+        }
+
+        &-row {
+            background-color: $light-grey;
+
+            &:nth-child(odd) {
+                background-color: $light-brown;
+                color: $white;
+            }
+        }
+
+        &-cell {
+            width: 7.5rem;
+            height: 3.3rem;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 1;
+            padding-top: .6rem;
+            padding-bottom: .6rem;
+            
+            &:first-child {
+                width: 18rem;
+                text-align: left;
+                padding-left: .6rem;
+                font-size: 1.2rem;
+                font-weight: 700;
+                border-left: none;
+            }
+
+            &--column-title {
+                padding: 0;
+                padding-top: .6rem;
+                height: 2.8rem;
+            }
+        }
+
+        &-extraInfo {
+            font-weight: 500;
+            padding-top: .5rem;
+        }
+    }
+}
