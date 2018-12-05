@@ -2,8 +2,8 @@ class Educacao {
 
     constructor(){
         this.escolasMenuTrigger = document.querySelector('.educacao__link');
-        this.escolasMenu = document.querySelector('.escolas');
-        this.escolaMenuCloseBtn = document.querySelector('.escolas__close-icon');
+        this.escolasMenu = document.querySelector('.escolas-navigation');
+        this.escolaMenuCloseBtn = document.querySelector('.escolas-navigation__close-icon');
         this.events();
     }
 
@@ -17,11 +17,11 @@ class Educacao {
     }
 
     openMenu() {
-        this.escolasMenu.classList.add('escolas-show');
+        this.escolasMenu.classList.add('escolas-navigation-show');
     }
 
     closeMenu() {
-        this.escolasMenu.classList.remove('escolas-show');
+        this.escolasMenu.classList.remove('escolas-navigation-show');
     }
 }
 

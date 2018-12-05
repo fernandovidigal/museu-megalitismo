@@ -2,6 +2,23 @@ import Swiper from 'swiper';
 import Modal from './modules/Modal';
 import Readmore from './modules/Readmore';
 import Educacao from './modules/Educacao';
+import Maps from './modules/Maps';
+
+// HIDE MENU QUANDO UM LINK É CLICADO
+var links = document.querySelectorAll('.navigation__link');
+var menuToggle = document.querySelector('.navigation__checkbox');
+var logoMenu = document.querySelector('.logo--menu');
+
+logoMenu.addEventListener('click', function(){
+    menuToggle.checked = false;
+});
+
+links.forEach(function(link){
+    link.addEventListener('click', function(){
+        menuToggle.checked = false;
+    });
+});
+
 
 var megalitismoSlider = new Swiper ('.postais-swiper', {
     loop: true,
@@ -29,6 +46,7 @@ var megalitismoSlider = new Swiper ('.postais-swiper', {
     }
 });
 
+// SWIPER DA GALERIA
 var galeriaSlider = new Swiper ('.galeria-swiper', {
     slidesPerView: 3,
     slidesPerColumn: 3,
@@ -60,12 +78,11 @@ var educacao = new Educacao();
 var museuReadMoreBtn = new Readmore('museu');
 var megalitismoReadMoreBtn = new Readmore('megalitismo');
 
-(function(){
-    
-    var uluru = {lat: 38.946870, lng: -8.161086};
+// MAP - GOOGLE MAPS
+/*function initMap(){
     var map = new google.maps.Map(document.querySelector('.contactos__mapa'), {
         zoom: 16,
-        center: uluru,
+        center: {lat: 38.946956, lng: -8.161269},
         styles: [
             {
               "featureType": "poi",
@@ -110,18 +127,36 @@ var megalitismoReadMoreBtn = new Readmore('megalitismo');
             style: google.maps.ZoomControlStyle.SMALL
         },
         streetViewControl: false,
-        //scaleControl: false,
         fullscreenControl: false
     });
-    map.setCenter({lat: 38.946870, lng: -8.161086});
+
+    setMarkers(map);
+};
+
+function setMarkers(map) {
+    var image = {
+      url: 'assets/images/mapMarker@2x.png',
+      size: new google.maps.Size(176, 125),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(88, 100)
+    };
+
     var marker = new google.maps.Marker({
-      position: uluru,
-      icon:'/assets/images/mapMarker.png',
-      map: map,
-      animation: google.maps.Animation.DROP
+        position: {lat: 38.946956, lng: -8.161269},
+        map: map,
+        icon: image,
     });
+    marker.addListener('click', function(){
+        if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+        } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+    });
+}*/
 
-})();
-
-//initMap();
+  window.addEventListener('load', function(){
+      var map = new Maps(38.946956, -8.161269);
+      map.animation = true;
+  });
 

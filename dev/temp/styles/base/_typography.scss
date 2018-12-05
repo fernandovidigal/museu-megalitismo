@@ -23,6 +23,11 @@ body {
         right: 0;
         z-index: -1;
     }
+
+    &--s::before {
+        font-size: 4.8rem;
+        top: -40%;
+    }
 }
 
 .heading-secondary {

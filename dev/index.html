@@ -24,18 +24,18 @@
         <nav class="navigation__nav">
 
             <div class="logo-box">
-                <img src="assets/images/logo-menu.svg" class="logo logo--menu" alt="Logotipo Museu Interactivo do Megalitismo">
+                <a href="#header"><img src="assets/images/logo-menu.svg" class="logo logo--menu" alt="Logotipo Museu Interactivo do Megalitismo"></a>
             </div>
 
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link">O Museu</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Megalitismo</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Educação</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Actividades</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Horário</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Preçário</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Galeria</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Contactos</a></li>
+                <li class="navigation__item"><a href="#museu" class="navigation__link">O Museu</a></li>
+                <li class="navigation__item"><a href="#megalitismo" class="navigation__link">Megalitismo</a></li>
+                <li class="navigation__item"><a href="#educacao" class="navigation__link">Educação</a></li>
+                <li class="navigation__item"><a href="#actividades" class="navigation__link">Actividades</a></li>
+                <li class="navigation__item"><a href="#horario" class="navigation__link">Horário</a></li>
+                <li class="navigation__item"><a href="#precario" class="navigation__link">Preçário</a></li>
+                <li class="navigation__item"><a href="#galeria" class="navigation__link">Galeria</a></li>
+                <li class="navigation__item"><a href="#contactos" class="navigation__link">Contactos</a></li>
             </ul>
 
             <div class="navigation__social">
@@ -44,7 +44,7 @@
         </nav>
     </div>
 
-    <header class="header">
+    <header class="header" id="header">
         <div class="logo-box">
             <img src="assets/images/logo.svg" class="logo" alt="Logotipo Museu Interactivo do Megalitismo">
         </div>
@@ -52,7 +52,7 @@
         <div class="scroll-icon"></div>
     </header>
 
-    <section class="museu">
+    <section class="museu" id="museu">
         <div class="wrapper">
             <h1 class="heading-primary" data-section-title="O MUSEU">O MUSEU</h1>
 
@@ -110,7 +110,7 @@
         </div>
     </section>
 
-    <section class="megalitismo">
+    <section class="megalitismo" id="megalitismo">
         <div class="triangle"></div>
         <div class="wrapper">
             <h1 class="heading-primary" data-section-title="MEGALITISMO">MEGALITISMO</h1>
@@ -234,17 +234,17 @@
         </div>
     </div>
 
-    <section class="educacao">
-        <div class="escolas">
+    <section class="educacao" id="educacao">
+        <div class="escolas-navigation">
             <h4 class="heading-tertiary">ESCOLAS</h4>
-            <span class="escolas__close-icon icon icon--close u-p-top-right">&nbsp;</span>
-            <nav class="escolas__nav">
-                <ul class="escolas__list">
-                    <li class="escolas__item"><a href="" class="escolas__link">Pré-Escolar<br><span class="escolas__link-small">(3 aos 5 anos)</span></a></li>
-                    <li class="escolas__item"><a href="" class="escolas__link">1º CEB<br><span class="escolas__link-small">(6 aos 10 anos)</span></a></li>
-                    <li class="escolas__item"><a href="" class="escolas__link">2º CEB<br><span class="escolas__link-small">(10 aos 12 anos)</span></a></li>
-                    <li class="escolas__item"><a href="" class="escolas__link">3º CEB<br><span class="escolas__link-small">(12 aos 15 anos)</span></a></li>
-                    <li class="escolas__item"><a href="" class="escolas__link">Ensino Secundário</a></li>
+            <span class="escolas-navigation__close-icon icon icon--close u-p-top-right">&nbsp;</span>
+            <nav class="escolas-navigation__nav">
+                <ul class="escolas-navigation__list">
+                    <li class="escolas-navigation__item"><a href="" class="escolas-navigation__link">Pré-Escolar<br><span class="escolas-navigation__link--small">(3 aos 5 anos)</span></a></li>
+                    <li class="escolas-navigation__item"><a href="" class="escolas-navigation__link">1º CEB<br><span class="escolas-navigation__link--small">(6 aos 10 anos)</span></a></li>
+                    <li class="escolas-navigation__item"><a href="" class="escolas-navigation__link">2º CEB<br><span class="escolas-navigation__link--small">(10 aos 12 anos)</span></a></li>
+                    <li class="escolas-navigation__item"><a href="" class="escolas-navigation__link">3º CEB<br><span class="escolas-navigation__link--small">(12 aos 15 anos)</span></a></li>
+                    <li class="escolas-navigation__item"><a href="" class="escolas-navigation__link">Ensino Secundário</a></li>
                 </ul>
             </nav>
         </div>
@@ -276,7 +276,7 @@
         </div>
     </section>
 
-    <section class="horario">
+    <section class="horario" id="horario">
         <div class="wrapper">
             <div class="horario__content">
                 <div class="horario__item u-margin-left-s">
@@ -305,7 +305,7 @@
         </div>
     </section>
 
-    <section class="precario">
+    <section class="precario" id="precario">
         <div class="wrapper">
             <h1 class="heading-primary" data-section-title="PREÇÁRIO">PREÇÁRIO</h1>
 
@@ -494,7 +494,7 @@
         </div>
     </section>
 
-    <div class="swiper-container galeria-swiper">
+    <div class="swiper-container galeria-swiper" id="galeria">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <img src="assets/images/gallerySlider/CMM_2066.jpg" class="galeria__image" alt="">
@@ -536,10 +536,10 @@
         <img src="assets/images/icons/finger-swipe.svg" class="galeria__finger-swipe" alt="">
     </div>
 
-    <section class="contactos">
+    <section class="contactos" id="contactos">
         <div class="contactos__mapa"></div>
         <div class="wrapper">
-            <h1 class="heading-primary" data-section-title="CONTACTE-NOS">CONTACTE-NOS</h1>
+            <h1 class="heading-primary heading-primary--s" data-section-title="CONTACTE-NOS">CONTACTE-NOS</h1>
             <form action="" method="POST">
                 <div class="contactos__form">
                     <input class="contactos__nome" type="text" name="nome" placeholder="Nome">
@@ -561,7 +561,7 @@
                     <img class="footer__social--facebook" src="assets/images/icons/social-facebook-white.svg" alt="Facebook">
                 </div>
                 <p class="footer__text p-bold">VISITE TAMBÉM</p>
-                <img class="footer__fluviario" src="assets/images//fluviario_logotipo.jpg" alt="Logotipo Fluviário de Mora">
+                <a href="http://www.fluviariomora.pt" target="_blank"><img class="footer__fluviario" src="assets/images//fluviario_logotipo.jpg" alt="Logotipo Fluviário de Mora"></a>
             </div>
         </div>
     </footer>
