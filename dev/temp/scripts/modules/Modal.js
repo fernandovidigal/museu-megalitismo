@@ -28,6 +28,7 @@ class Modal {
     closeModal(e) {
         this.modal.classList.remove('modal-show');
         this.pageBody.classList.remove('modal-open');
+        this.modalContent.innerHTML = "";
     }
 
     keyPressHandler(e) {
@@ -55,6 +56,12 @@ class Modal {
         }
         xhttp.open("GET", "./data/postais/" + page + ".html", true);
         xhttp.send();
+    }
+
+    loadImage(image) {
+        var img = document.createElement("IMG");
+        img.setAttribute("src", image);
+        this.modalContent.appendChild(img);
     }
 }
 

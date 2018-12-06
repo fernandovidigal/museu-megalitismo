@@ -5,6 +5,12 @@ class Educacao {
         this.escolasMenu = document.querySelector('.escolas-navigation');
         this.escolaMenuCloseBtn = document.querySelector('.escolas-navigation__close-icon');
         this.educacaoContent = document.querySelector('.educacao__content');
+        this.mainContent = this.educacaoContent.innerHTML;
+
+        // Guarda o conteúdo da página inicial da Educação
+        this.mainContent = document.querySelector('.educacao__content').innerHTML;
+
+        // Events Handlers
         this.events();
     }
 
@@ -15,6 +21,14 @@ class Educacao {
         }.bind(this));
 
         this.escolaMenuCloseBtn.addEventListener('click', this.closeMenu.bind(this));
+
+        var that = this;
+        this.educacaoContent.addEventListener('click', function(e){
+            if(e.target.classList.contains('educacao__actividades-back')) {
+                e.preventDefault();
+                this.innerHTML = that.mainContent;
+            }
+        });
     }
 
     openMenu() {
@@ -27,7 +41,6 @@ class Educacao {
 
     loadPage(page) {
 
-        // Faz o pedido para carregar a página
         var xhttp = new XMLHttpRequest();
         var that = this;
         xhttp.onreadystatechange = function() {

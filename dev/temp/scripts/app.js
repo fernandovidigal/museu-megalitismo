@@ -46,13 +46,16 @@ var megalitismoSlider = new Swiper ('.postais-swiper', {
     }
 });
 
+var modal = new Modal();
+
 // SWIPER DA GALERIA
 var galeriaSlider = new Swiper ('.galeria-swiper', {
     slidesPerView: 3,
     slidesPerColumn: 3,
     on: {
-        click: function(){
-            alert("Olá Mundo");
+        click: function(e){
+            modal.openModal();
+            modal.loadImage(e.srcElement.getAttribute('src'));
         }
     }
 });
@@ -64,7 +67,6 @@ descricaoBtns.forEach(function(btn){
     btn.addEventListener('click', function(e){
         e.stopPropagation();
         e.preventDefault();
-        var modal = new Modal();
         modal.openModal();
         modal.loadPage(btn.getAttribute('data-pagename'));
     });
