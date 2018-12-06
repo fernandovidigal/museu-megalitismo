@@ -73,90 +73,22 @@ descricaoBtns.forEach(function(btn){
 // MENU ESCOLAS
 var educacao = new Educacao();
 
+var escolasMenuItems = document.querySelectorAll('.escolas-navigation__link');
+escolasMenuItems.forEach(function(menuItem){
+    menuItem.addEventListener('click', function(e){
+        e.preventDefault();
+        educacao.loadPage(menuItem.getAttribute('data-escolamenuitem'));
+    });
+});
+
 
 // READ MORE BUTTONS HANDLE
 var museuReadMoreBtn = new Readmore('museu');
 var megalitismoReadMoreBtn = new Readmore('megalitismo');
 
 // MAP - GOOGLE MAPS
-/*function initMap(){
-    var map = new google.maps.Map(document.querySelector('.contactos__mapa'), {
-        zoom: 16,
-        center: {lat: 38.946956, lng: -8.161269},
-        styles: [
-            {
-              "featureType": "poi",
-              "elementType": "labels.text",
-              "stylers": [
-                {
-                  "visibility": "off"
-                }
-              ]
-            },
-            {
-              "featureType": "poi.business",
-              "stylers": [
-                {
-                  "visibility": "off"
-                }
-              ]
-            },
-            {
-              "featureType": "road",
-              "elementType": "labels.icon",
-              "stylers": [
-                {
-                  "visibility": "off"
-                }
-              ]
-            },
-            {
-              "featureType": "transit",
-              "stylers": [
-                {
-                  "visibility": "off"
-                }
-              ]
-            }
-        ],
-        scrollwheel: false,
-        mapTypeControl: false,
-        zoomControl: true,
-        zoomControlOptions: {
-            position: google.maps.ControlPosition.RIGHT_BOTTOM,
-            style: google.maps.ZoomControlStyle.SMALL
-        },
-        streetViewControl: false,
-        fullscreenControl: false
-    });
-
-    setMarkers(map);
-};
-
-function setMarkers(map) {
-    var image = {
-      url: 'assets/images/mapMarker@2x.png',
-      size: new google.maps.Size(176, 125),
-      origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(88, 100)
-    };
-
-    var marker = new google.maps.Marker({
-        position: {lat: 38.946956, lng: -8.161269},
-        map: map,
-        icon: image,
-    });
-    marker.addListener('click', function(){
-        if (marker.getAnimation() !== null) {
-            marker.setAnimation(null);
-        } else {
-            marker.setAnimation(google.maps.Animation.BOUNCE);
-        }
-    });
-}*/
-
-  window.addEventListener('load', function(){
-      var map = new Maps(38.946956, -8.161269);
-      map.animation = true;
-  });
+window.addEventListener('load', function(){
+    var map = new Maps(38.946956, -8.161269);
+    map.animation = true;
+});
 

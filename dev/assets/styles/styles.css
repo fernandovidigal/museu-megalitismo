@@ -624,6 +624,9 @@ body {
 .p-bold {
   font-weight: 700; }
 
+.p-medium {
+  font-weight: 500; }
+
 *,
 *::after,
 *::before {
@@ -1169,6 +1172,47 @@ body {
 
 .educacao__pp-titulo {
   font-size: 1.7rem; }
+
+.educacao__actividades {
+  display: flex;
+  flex-direction: column; }
+
+.educacao__actividades-card {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 0.2rem 0.8rem rgba(76, 72, 69, 0.15); }
+
+.educacao__actividades-card:not(:last-child) {
+      margin-bottom: 2rem; }
+
+.educacao__actividades-image-placeholder {
+    width: 30%;
+    min-height: 15rem;
+    overflow: hidden;
+    position: relative; }
+
+.educacao__actividades-image {
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0; }
+
+.educacao__actividades-content {
+    width: 70%;
+    padding: 1rem 1.2rem 1rem 1.6rem;
+    display: flex;
+    flex-direction: column; }
+
+.educacao__actividades-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: .5rem; }
+
+.educacao__actividades-description {
+    margin-bottom: auto;
+    font-size: 1.05rem; }
 
 .escolas-navigation {
   width: 100%;

@@ -52,6 +52,56 @@
     &__pp-titulo {
         font-size: 1.7rem;
     }
+
+    // ACTIVIDADES
+    &__actividades {
+        display: flex;
+        flex-direction: column;
+
+        &-card {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            background-color: $white;
+            box-shadow: 0 .2rem .8rem rgba($dark, .15);
+
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        &-image-placeholder {
+            width: 30%;
+            min-height: 15rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        &-image {
+            display: block;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        &-content {
+            width: 70%;
+            padding: 1rem 1.2rem 1rem 1.6rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: .5rem;
+        }
+
+        &-description {
+            margin-bottom: auto;
+            font-size: 1.05rem;
+        }
+    }
 }
 
 // MENU ESCOLAS

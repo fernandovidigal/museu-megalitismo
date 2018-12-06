@@ -80,7 +80,7 @@ class Maps {
         marker.addListener('click', function(){
             console.log(this);
             if(that.animation) {
-                that.bounceAnimation.bind(this);
+                that.bounceAnimation.call(this);
             }
         });
     }
