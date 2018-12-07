@@ -19,4 +19,19 @@
         animation-duration: 1.5s;
         animation-name: fingerswipe;
     }
+
+    &__modal-controls {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 5rem;
+
+        &__back,
+        &__next {
+            display: block;
+            width: 2rem;
+            height: auto;
+            cursor: pointer;
+        }
+    }
 }

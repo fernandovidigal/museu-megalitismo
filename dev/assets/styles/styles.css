@@ -1402,6 +1402,18 @@ body {
     -webkit-animation-name: fingerswipe;
             animation-name: fingerswipe; }
 
+.galeria__modal-controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem; }
+
+.galeria__modal-controls__back, .galeria__modal-controls__next {
+      display: block;
+      width: 2rem;
+      height: auto;
+      cursor: pointer; }
+
 .contactos__form {
   width: 28rem;
   margin: 0 auto;

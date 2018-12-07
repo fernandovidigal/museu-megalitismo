@@ -3,8 +3,9 @@ import Modal from './modules/Modal';
 import Readmore from './modules/Readmore';
 import Educacao from './modules/Educacao';
 import Maps from './modules/Maps';
+import GaleriaSlideShow from './modules/GaleriaSlideShow';
 
-// HIDE MENU QUANDO UM LINK É CLICADO
+// MAIN MENU - ESCONDE MENU QUANDO UM LINK É CLICADO
 var links = document.querySelectorAll('.navigation__link');
 var menuToggle = document.querySelector('.navigation__checkbox');
 var logoMenu = document.querySelector('.logo--menu');
@@ -47,6 +48,9 @@ var megalitismoSlider = new Swiper ('.postais-swiper', {
 });
 
 var modal = new Modal();
+var galeriaSlideshow = new GaleriaSlideShow(modal);
+
+var galeriaImages = document.querySelectorAll('.galeria__image');
 
 // SWIPER DA GALERIA
 var galeriaSlider = new Swiper ('.galeria-swiper', {
@@ -54,8 +58,11 @@ var galeriaSlider = new Swiper ('.galeria-swiper', {
     slidesPerColumn: 3,
     on: {
         click: function(e){
-            modal.openModal();
-            modal.loadImage(e.srcElement.getAttribute('src'));
+            //modal.openModal();
+            //modal.loadImage(e.srcElement.getAttribute('src'));
+            //console.log(this.clickedIndex);
+            //console.log(galeriaImages[this.clickedIndex]);
+            galeriaSlideshow.loadModal(this.clickedIndex);
         }
     }
 });

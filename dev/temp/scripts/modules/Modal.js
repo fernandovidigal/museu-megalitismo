@@ -4,6 +4,7 @@ class Modal {
         this.modal = document.querySelector('.modal');
         this.modalWrapper = document.querySelector('.modal__wrapper');
         this.modalContent = document.querySelector('.modal__content');
+        this.modalFooter = document.querySelector('.modal__footer');
         this.pageBody = document.querySelector('body');
         this.closeBtn = document.querySelector('.modal-close');
         this.events();
@@ -33,7 +34,7 @@ class Modal {
     closeModal() {
         this.modal.classList.remove('modal-show');
         this.pageBody.classList.remove('modal-open');
-        this.modalContent.innerHTML = "";
+        this.clearContent(this.modalContent);
     }
 
     keyPressHandler(e) {
@@ -62,10 +63,16 @@ class Modal {
 
     loadImage(image) {
         this.showLoader();
+        this.clearContent(this.modalContent);
 
         var img = document.createElement("IMG");
         img.setAttribute("src", image);
         this.modalContent.appendChild(img);
+    }
+
+    setFooter(content){
+        this.clearContent(this.modalFooter);
+        this.modalFooter.appendChild(content);
     }
 
     showLoader(){
@@ -73,6 +80,10 @@ class Modal {
         var loader = document.createElement('div');
         loader.setAttribute('class', 'loader');
         this.modalContent.appendChild(loader);
+    }
+
+    clearContent(area){
+        area.innerHTML = "";
     }
 }
 
