@@ -17,7 +17,12 @@ class Modal {
         document.addEventListener('keyup', this.keyPressHandler.bind(this));
 
         // Carregar na parte preta
-        this.modal.addEventListener('click', this.closeModal.bind(this));
+        var that = this;
+        this.modal.addEventListener('click', function(e){
+            if(e.target.classList.contains('modal')){
+                this.closeModal();
+            }
+        }.bind(this));
     }
 
     openModal() {
@@ -25,7 +30,7 @@ class Modal {
         this.pageBody.classList.add('modal-open');
     }
 
-    closeModal(e) {
+    closeModal() {
         this.modal.classList.remove('modal-show');
         this.pageBody.classList.remove('modal-open');
         this.modalContent.innerHTML = "";
@@ -38,10 +43,7 @@ class Modal {
     }
 
     loadPage(page) {
-        // Criar o Loading spinner
-        var loader = document.createElement('div');
-        loader.setAttribute('class', 'loader');
-        this.modalContent.appendChild(loader);
+        this.showLoader();
 
         // Faz o pedido para carregar a página
         var xhttp = new XMLHttpRequest();
@@ -59,9 +61,18 @@ class Modal {
     }
 
     loadImage(image) {
+        this.showLoader();
+
         var img = document.createElement("IMG");
         img.setAttribute("src", image);
         this.modalContent.appendChild(img);
+    }
+
+    showLoader(){
+        // Criar o Loading spinner
+        var loader = document.createElement('div');
+        loader.setAttribute('class', 'loader');
+        this.modalContent.appendChild(loader);
     }
 }
 
