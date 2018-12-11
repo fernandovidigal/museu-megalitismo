@@ -627,6 +627,17 @@ body {
 .p-medium {
   font-weight: 500; }
 
+/*
+.site-header {
+    padding: 2rem;
+    font-size: 1.8rem;
+    @include mediaquerie('tablet-wide') {
+        padding-top: 4rem;
+        font-size: 2.4rem;
+    }
+}
+*/
+
 *,
 *::after,
 *::before {
@@ -636,6 +647,10 @@ body {
 
 html {
   font-size: 62.5%; }
+
+@media only screen and (min-width: 640px) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -803,7 +818,7 @@ body {
   height: 100vh;
   background-color: #EBECE7;
   z-index: 50;
-  top: -100vh;
+  top: -100%;
   transition: all .3s; }
 
 .navigation__list {
@@ -843,6 +858,12 @@ body {
   background-image: url(../images/mobileBG.jpg);
   background-size: cover;
   background-position: center bottom; }
+
+@media only screen and (min-width: 768px) {
+    .header {
+      background-image: url(../images/DSC_5433.jpg);
+      background-position: 70% 100%;
+      background-size: cover; } }
 
 .logo {
   width: 18rem;
@@ -1046,12 +1067,26 @@ body {
     flex: 0 0 50%;
     position: relative; }
 
+@media only screen and (min-width: 768px) {
+      .valencias__item {
+        height: 220px;
+        overflow: hidden; } }
+
+.valencias__item:nth-child(3) > .valencias__image,
+    .valencias__item:nth-child(4) > .valencias__image {
+      top: -80%; }
+
 .valencias__image {
     width: 100%;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     -webkit-filter: brightness(50%);
             filter: brightness(50%); }
+
+@media only screen and (min-width: 768px) {
+      .valencias__image {
+        position: absolute;
+        top: -40%; } }
 
 .valencias__content {
     position: absolute;
@@ -1151,14 +1186,28 @@ body {
   justify-content: space-around;
   align-items: center; }
 
+@media only screen and (min-width: 640px) {
+    .educacao__list {
+      flex-wrap: nowrap;
+      justify-content: space-between; } }
+
 .educacao__item {
   list-style: none;
   flex-basis: 40%;
   text-align: center; }
 
+@media only screen and (min-width: 640px) {
+    .educacao__item {
+      flex-basis: auto; } }
+
 .educacao__item:last-child {
     flex-basis: 100%;
     margin-top: 1rem; }
+
+@media only screen and (min-width: 640px) {
+      .educacao__item:last-child {
+        margin-top: 0;
+        flex-basis: auto; } }
 
 .educacao__link {
   display: inline-block;
@@ -1278,8 +1327,21 @@ body {
 .horario__content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 3rem; }
+
+.horario__abertura-info {
+    margin-left: 3rem;
+    align-self: flex-start; }
+
+@media only screen and (max-width: 374px) {
+      .horario__abertura-info {
+        margin-left: 1rem; } }
+
+@media only screen and (min-width: 480px) {
+      .horario__abertura-info {
+        margin-left: 0;
+        align-self: center; } }
 
 .horario__item {
     display: flex;

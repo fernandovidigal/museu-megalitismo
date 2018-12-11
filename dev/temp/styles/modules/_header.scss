@@ -4,6 +4,12 @@
     background-image: url(../images/mobileBG.jpg);
     background-size: cover;
     background-position: center bottom;
+
+    @include mediaquerie('tablet') {
+        background-image: url(../images/DSC_5433.jpg);
+        background-position: 70% 100%;
+        background-size: cover;
+    } 
 }
 
 .logo {

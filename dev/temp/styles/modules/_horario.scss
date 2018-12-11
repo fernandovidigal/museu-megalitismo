@@ -5,8 +5,22 @@
     &__content {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         margin-top: 3rem;
+    }
+
+    &__abertura-info {
+        margin-left: 3rem;
+        align-self: flex-start;
+
+        @include mediaquerie('phone', max) {
+            margin-left: 1rem;
+        }
+
+        @include mediaquerie('phone-wide') {
+            margin-left: 0;
+            align-self: center;
+        }
     }
 
     &__item {

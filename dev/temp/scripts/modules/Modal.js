@@ -35,6 +35,7 @@ class Modal {
         this.modal.classList.remove('modal-show');
         this.pageBody.classList.remove('modal-open');
         this.clearContent(this.modalContent);
+        this.clearContent(this.modalFooter);
     }
 
     keyPressHandler(e) {

@@ -10,6 +10,11 @@
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
+
+        @include mediaquerie('tablet-small') {
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
     }
 
     &__item {
@@ -17,9 +22,18 @@
         flex-basis: 40%;
         text-align: center;
 
+        @include mediaquerie('tablet-small') {
+            flex-basis: auto;
+        }
+
         &:last-child {
             flex-basis: 100%;
             margin-top: 1rem;
+
+            @include mediaquerie('tablet-small') {
+                margin-top: 0;
+                flex-basis: auto;
+            }
         }
     }
 
