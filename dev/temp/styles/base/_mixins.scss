@@ -26,6 +26,18 @@ $breakpoints: (
     }
 }
 
+@mixin mqlandscape($width, $type: min) {
+    @if map-has-key($breakpoints, $width) {
+        $width: map-get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) and (orientation: landscape) {
+            @content;
+        }
+    }
+}
+
 // USE CASE
 /*
 .site-header {

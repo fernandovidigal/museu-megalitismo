@@ -4,8 +4,17 @@
     width: 1.6rem;
     height: 1.7rem;
 
+    @include mediaquerie('tablet'){
+        width: 2.2rem;
+        height: 2rem;
+    }
+
     &--video-camera {
-        background-image: url(../images/icons/video-camera.svg);    
+        background-image: url(../images/icons/video-camera.svg);
+        
+        &--grey {
+            background-image: url(../images/icons/video-camera-grey.svg);
+        }
     }
 
     &--pdf {

@@ -1,4 +1,5 @@
 .navigation {
+    position: relative;
 
     &__checkbox {
         display: none;
@@ -17,6 +18,13 @@
         box-shadow: 0 0 2rem rgba($dark-brown, .5);
         z-index: 100;
         cursor: pointer;
+
+        @include mediaquerie('tablet') {
+            background-color: $light-brown;
+            width: 6rem;
+            height: 6rem;
+            top: -10rem;
+        }
     }
 
     &__icon {
@@ -31,6 +39,12 @@
             height: 2px;
             background-color: $dark-brown;
             display: inline-block;
+
+            @include mediaquerie('tablet') {
+                background-color: $light-grey;
+                width: 2.6rem;
+                height: 4px;
+            }
         }
 
         &::before,
@@ -41,10 +55,22 @@
             transition: all .2s;
         }
 
-        &::before { top: -.6rem; }
+        &::before { 
+            top: -.6rem; 
+
+            @include mediaquerie('tablet') {
+                top: -.9rem;
+            }
+        }
+
         &::after { 
             top: .6rem;
             width: 1rem;
+
+            @include mediaquerie('tablet') {
+                top: .9rem;
+                width: 1.8rem;
+            }
         }
     }
 
@@ -61,17 +87,29 @@
         top: 0;
         width: 1.6rem;
         transform: rotate(-135deg);
+
+        @include mediaquerie('tablet') {
+            width: 2.6rem;
+        }
     }
 
-    // NAVIGATION
+    // NAVIGATION MENU
     &__nav {
         position: fixed;
         width: 100%;
         height: 100vh;
         background-color: $light-grey;
         z-index: 50;
-        top: -100%;
+        top: -100vh;
         transition: all .3s;
+
+        @include mediaquerie('tablet') {
+            position: absolute;
+            right: 2rem;
+            top: 0;
+            background-color: transparent;
+            width: auto;
+        }
     }
 
     &__list {
@@ -83,6 +121,31 @@
         left: 50%;
         transform: translate(-50%, -50%);
         list-style: none;
+        
+        @include mqlandscape('phone-wide') {
+            width: 60%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            top: 60%;
+            left: 40%;
+        }
+
+        @include mediaquerie('tablet') {
+            text-align: right;
+            top: 5vh;
+            left: auto;
+            right: 1rem;
+            transform: none;
+            font-size: 3rem;
+            line-height: 2.2;
+        }
+    }
+
+    &__item {
+        @include mqlandscape('phone-wide') {
+            flex-basis: 50%;
+        }
     }
 
     &__link {
@@ -91,6 +154,12 @@
             display: block;
             text-decoration: none;
             color: $dark-brown;
+            cursor: pointer;
+
+            @include mediaquerie('tablet') {
+                color: $white;
+                font-weight: 300;
+            }
         }
     }
 
@@ -100,6 +169,16 @@
         left: 50%;
         bottom: 3%;
         transform: translateX(-50%);
+
+        @include mqlandscape('phone-wide') {
+            right: 1.5rem;
+            left: auto;
+        }
+
+        @include mediaquerie('tablet') {
+            display: none;
+        }
+
 
         &-facebook {
             width: 3rem;

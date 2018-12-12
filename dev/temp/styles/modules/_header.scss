@@ -4,12 +4,20 @@
     background-image: url(../images/mobileBG.jpg);
     background-size: cover;
     background-position: center bottom;
+    position: relative;
 
     @include mediaquerie('tablet') {
         background-image: url(../images/DSC_5433.jpg);
         background-position: 70% 100%;
         background-size: cover;
     } 
+
+    &__btn-box {
+        display: none;
+        position: absolute;
+        bottom: 10vh;
+        left: 2.5rem;
+    }
 }
 
 .logo {
@@ -18,8 +26,22 @@
     padding-top: 2rem;
     padding-left: 2rem;
 
+    @include mediaquerie('tablet') {
+        width: 25rem;
+        padding-top: 5rem;
+        padding-left: 3rem;
+    }
+
     &--menu {
         width: 35%;
+
+        @include mqlandscape('phone-wide') {
+            width: 20%;
+        }
+
+        @include mediaquerie('tablet') {
+            display: none;
+        }
     }
 }
 
@@ -37,6 +59,10 @@
     margin-top: -35px;
     box-shadow: inset 0 0 0 1px $white;
     border-radius: 25px;
+
+    @include mediaquerie('tablet') {
+        display: none;
+    }
 
     &::before {
         content: '';
