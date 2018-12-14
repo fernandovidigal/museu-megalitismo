@@ -8,8 +8,8 @@
     font-size: 1.3rem;
 
     @include mediaquerie('tablet'){
-        font-size: 1.6rem;
-        height: 4rem;
+        font-size: 1.4rem;
+        height: 3.5rem;
     }
 
     &-primary {
@@ -24,6 +24,7 @@
         &--grey {
             background-color: $light-grey;
             color: $dark-brown;
+            box-shadow: 0 .4rem 2rem rgba($black, $alpha: .8)
         }
     }
 

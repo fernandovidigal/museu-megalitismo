@@ -1,9 +1,11 @@
+import $ from 'jquery';
 import Swiper from 'swiper';
 import Modal from './modules/Modal';
 import Readmore from './modules/Readmore';
 import Educacao from './modules/Educacao';
 import Maps from './modules/Maps';
 import GaleriaSlideShow from './modules/GaleriaSlideShow';
+import smoothScroll from 'jquery-smooth-scroll';
 
 // MAIN MENU - ESCONDE MENU QUANDO UM LINK É CLICADO
 var links = document.querySelectorAll('.navigation__link');
@@ -15,8 +17,16 @@ logoMenu.addEventListener('click', function(){
 });
 
 links.forEach(function(link){
-    link.addEventListener('click', function(){
+    link.addEventListener('click', function(e){
         menuToggle.checked = false;
+        e.preventDefault();
+       
+        // Activa o Smooth Scroll
+        var that = this;
+        $.smoothScroll({
+            scrollTarget: that.hash,
+            offset: -20
+        });
     });
 });
 

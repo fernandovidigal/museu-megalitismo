@@ -872,14 +872,15 @@ body {
             transform: translate(-50%, -50%);
     list-style: none; }
 
-@media only screen and (min-width: 480px) and (orientation: landscape) {
+@media only screen and (max-width: 767px) and (orientation: landscape) {
       .navigation__list {
-        width: 60%;
+        width: 65%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        top: 60%;
-        left: 40%; } }
+        top: 55%;
+        left: 50%;
+        font-size: 2.2rem; } }
 
 @media only screen and (min-width: 768px) {
       .navigation__list {
@@ -946,10 +947,14 @@ body {
       background-size: cover; } }
 
 .header__btn-box {
-    display: none;
+    display: none !important;
     position: absolute;
     bottom: 10vh;
     left: 2.5rem; }
+
+@media only screen and (min-width: 768px) {
+      .header__btn-box {
+        display: flex !important; } }
 
 .logo {
   width: 18rem;
@@ -1028,8 +1033,8 @@ body {
 
 @media only screen and (min-width: 768px) {
     .btn {
-      font-size: 1.6rem;
-      height: 4rem; } }
+      font-size: 1.4rem;
+      height: 3.5rem; } }
 
 .btn-primary {
     border: solid 1px #60504D;
@@ -1041,7 +1046,8 @@ body {
 
 .btn-secondary--grey {
       background-color: #EBECE7;
-      color: #60504D; }
+      color: #60504D;
+      box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.8); }
 
 .btn-postais {
     border: solid 1px #FFFFFF;

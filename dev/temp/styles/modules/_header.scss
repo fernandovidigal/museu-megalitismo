@@ -13,10 +13,14 @@
     } 
 
     &__btn-box {
-        display: none;
+        display: none !important;
         position: absolute;
         bottom: 10vh;
         left: 2.5rem;
+
+        @include mediaquerie('tablet') {
+            display: flex !important;
+        }
     }
 }
 
