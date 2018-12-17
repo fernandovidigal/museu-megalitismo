@@ -12,19 +12,31 @@ body {
     color: $dark-brown;
     position: relative;
 
+    @include mediaquerie('tablet'){
+        text-align: left;
+        margin-left: 4rem;
+        font-size: 5rem;
+    }
+
     &::before {
         content: attr(data-section-title);
         color: rgba($light-grey, $alpha: .25);
         font-size: 6.1rem;
         display: block;
         position: absolute;
-        top: -60%;
+        top: -4rem;
         left: 0;
         right: 0;
         z-index: -1;
+
+        @include mediaquerie('tablet'){
+            font-size: 8rem !important;
+            top: -5.5rem !important;
+            left: -3.5rem;
+        }
     }
 
-    &--s::before {
+    &--small::before {
         font-size: 4.8rem;
         top: -40%;
     }

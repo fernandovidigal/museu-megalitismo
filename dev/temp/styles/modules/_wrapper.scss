@@ -3,4 +3,9 @@
     max-width: 1970px;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
+
+    @include mediaquerie('tablet'){
+        padding: 5rem 3rem;
+    }
 }

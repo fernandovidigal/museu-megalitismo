@@ -6,6 +6,7 @@ import Educacao from './modules/Educacao';
 import Maps from './modules/Maps';
 import GaleriaSlideShow from './modules/GaleriaSlideShow';
 import smoothScroll from 'jquery-smooth-scroll';
+import Menu from './modules/Menu';
 
 // MAIN MENU - ESCONDE MENU QUANDO UM LINK É CLICADO
 var links = document.querySelectorAll('.navigation__link');
@@ -30,6 +31,7 @@ links.forEach(function(link){
     });
 });
 
+var menu = new Menu();
 
 var megalitismoSlider = new Swiper ('.postais-swiper', {
     loop: true,

@@ -21,9 +21,14 @@
 
         @include mediaquerie('tablet') {
             background-color: $light-brown;
-            width: 6rem;
-            height: 6rem;
-            top: -10rem;
+            width: 4.5rem;
+            height: 4.5rem;
+            top: -5rem;
+            transition: top .3s;
+        }
+
+        &--show {
+            top: 2.5rem;
         }
     }
 
@@ -42,8 +47,8 @@
 
             @include mediaquerie('tablet') {
                 background-color: $light-grey;
-                width: 2.6rem;
-                height: 4px;
+                width: 2.2rem;
+                height: 3px;
             }
         }
 
@@ -59,7 +64,7 @@
             top: -.6rem; 
 
             @include mediaquerie('tablet') {
-                top: -.9rem;
+                top: -.7rem;
             }
         }
 
@@ -68,8 +73,8 @@
             width: 1rem;
 
             @include mediaquerie('tablet') {
-                top: .9rem;
-                width: 1.8rem;
+                top: .7rem;
+                width: 1.2rem;
             }
         }
     }
@@ -89,27 +94,19 @@
         transform: rotate(-135deg);
 
         @include mediaquerie('tablet') {
-            width: 2.6rem;
+            width: 2.2rem;
         }
     }
 
-    // NAVIGATION MENU
-    &__nav {
+    // NAVIGATION MENU LIST
+    &__float {
         position: fixed;
         width: 100%;
         height: 100vh;
         background-color: $light-grey;
         z-index: 50;
         top: -100vh;
-        transition: all .3s;
-
-        @include mediaquerie('tablet') {
-            position: absolute;
-            right: 2rem;
-            top: 0;
-            background-color: transparent;
-            width: auto;
-        }
+        transition: top .3s;
     }
 
     &__list {
@@ -131,16 +128,6 @@
             left: 50%;
             font-size: 2.2rem;
         }
-
-        @include mediaquerie('tablet') {
-            text-align: right;
-            top: 5vh;
-            left: auto;
-            right: 1rem;
-            transform: none;
-            font-size: 3rem;
-            line-height: 2.2;
-        }
     }
 
     &__item {
@@ -156,11 +143,6 @@
             text-decoration: none;
             color: $dark-brown;
             cursor: pointer;
-
-            @include mediaquerie('tablet') {
-                color: $white;
-                font-weight: 300;
-            }
         }
     }
 
@@ -176,18 +158,39 @@
             left: auto;
         }
 
-        @include mediaquerie('tablet') {
-            display: none;
-        }
-
-
         &-facebook {
             width: 3rem;
             height: 3rem;
         }
     }
 
-    &__checkbox:checked ~ &__nav {
+    &__checkbox:checked ~ &__float {
         top: 0;
+    }
+
+    // Main Menu
+    &__main {
+        position: absolute;
+        right: 2.5rem;
+        top: 3.5rem;
+        z-index: 40;
+
+        &__list {
+            text-align: right;
+            font-size: 2.6rem;
+            line-height: 2.2;
+            top: 5vh;
+            list-style: none;
+        }
+
+        &__link {
+            &:link,
+            &:visited {
+                display: block;
+                text-decoration: none;
+                color: $white;
+                cursor: pointer;
+            }
+        }
     }
 }

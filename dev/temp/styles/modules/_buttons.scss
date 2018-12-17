@@ -8,7 +8,7 @@
     font-size: 1.3rem;
 
     @include mediaquerie('tablet'){
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         height: 3.5rem;
     }
 
@@ -20,12 +20,12 @@
     &-secondary {
         background-color: $dark-brown;
         color: $white;
+    }
 
-        &--grey {
-            background-color: $light-grey;
-            color: $dark-brown;
-            box-shadow: 0 .4rem 2rem rgba($black, $alpha: .8)
-        }
+    &-tertiary {
+        background-color: $light-grey;
+        color: $dark-brown;
+        box-shadow: 0 .4rem 2rem rgba($black, $alpha: .8)
     }
 
     &-postais {

@@ -15,7 +15,7 @@
     &__btn-box {
         display: none !important;
         position: absolute;
-        bottom: 10vh;
+        bottom: 8vh;
         left: 2.5rem;
 
         @include mediaquerie('tablet') {
@@ -31,8 +31,8 @@
     padding-left: 2rem;
 
     @include mediaquerie('tablet') {
-        width: 25rem;
-        padding-top: 5rem;
+        width: 20rem;
+        padding-top: 3rem;
         padding-left: 3rem;
     }
 
@@ -44,7 +44,7 @@
         }
 
         @include mediaquerie('tablet') {
-            display: none;
+            width: 16rem;
         }
     }
 }

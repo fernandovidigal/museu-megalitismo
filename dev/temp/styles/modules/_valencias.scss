@@ -26,6 +26,7 @@
         @include mediaquerie('tablet') {
             position: absolute;
             top: -40%;
+            transform: scale(1);
         }
     }
 

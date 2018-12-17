@@ -11,7 +11,7 @@ html {
     font-size: 62.5%; // 1 rem = 10px ===> 10px/16px = 62.5%
 
     @include mediaquerie('tablet-small') {
-        font-size: 75%;
+        font-size: 80%; //12,8px    
     }
 }
 
