@@ -5,7 +5,15 @@
     margin-right: auto;
     overflow: hidden;
 
-    @include mediaquerie('tablet'){
+    @include mqlandscape('phablet'){
+        padding: 5rem 2.2rem;
+    }
+
+    @include mediaquerie('tablet-small'){
         padding: 5rem 3rem;
+    }
+
+    @include mediaquerie('tablet-wide') {
+        padding: 5rem 7rem;
     }
 }

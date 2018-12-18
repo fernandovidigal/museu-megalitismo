@@ -10,8 +10,16 @@ html {
     // Defines what 1rem is 
     font-size: 62.5%; // 1 rem = 10px ===> 10px/16px = 62.5%
 
-    @include mediaquerie('tablet-small') {
+    @include mediaquerie('phablet') {
+        font-size: 70%; //11,2px   
+    }
+
+    @include mediaquerie('tablet') {
         font-size: 80%; //12,8px    
+    }
+
+    @include mediaquerie('tablet-wide') {
+        font-size: 90%; //12,8px    
     }
 }
 

@@ -18,4 +18,9 @@
     height: 253rem;
     transform: rotate(45deg);
     z-index: -1;
+
+    @include mediaquerie('tablet-wide') {
+        top: -110%;
+        left: 80%;
+    }
 }

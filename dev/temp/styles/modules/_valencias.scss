@@ -7,14 +7,33 @@
         flex: 0 0 50%;
         position: relative;
 
+        @include mqlandscape('phablet') {
+            height: 180px;
+            overflow: hidden;
+        }
+
         @include mediaquerie('tablet') {
             height: 220px;
             overflow: hidden;
         }
 
+        @include mqlandscapeH('600px') {
+            height: 25rem;
+        }
+
         &:nth-child(3) > .valencias__image,
         &:nth-child(4) > .valencias__image {
             top: -80%;
+
+            @include mqlandscape('phablet') {
+                top: -75%;
+                transform: scale(1.25);
+            }
+
+            @include mqlandscapeH('600px') {
+                top: -65%;
+                transform: scale(1.2);
+            }
         }
     }
 
@@ -22,6 +41,11 @@
         width: 100%;
         transform: scale(1.1);
         filter: brightness(50%);
+
+        @include mqlandscape('phablet') {
+            position: absolute;
+            top: -30%;
+        }
 
         @include mediaquerie('tablet') {
             position: absolute;

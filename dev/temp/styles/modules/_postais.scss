@@ -5,9 +5,23 @@
         width: 100%;
         position: relative;
 
+        @include mqlandscape('phablet'){
+            height: 28.5rem;
+            overflow: hidden;
+        }
+
+        @include mediaquerie('tablet-wide') {
+            height: 42rem;
+        }
+
         &-image {
             display: block;
             width: 100%;
+
+            @include mqlandscape('phablet'){
+                position: absolute;
+                bottom: -1rem;
+            }
         }
 
         &-title {
@@ -20,6 +34,10 @@
             left: 0;
             right: 0;
             display: none;
+
+            @include mediaquerie('tablet-wide') {
+                font-size: 2.5rem;
+            }
 
             &--show {
                 display: block;
@@ -48,10 +66,23 @@
     &__heading {
         font-weight: 700;
         font-size: 2.2rem;
+
+        @include mediaquerie('tablet'){
+            font-size: 3.2rem;
+            letter-spacing: 1px;
+        }
+
+        @include mediaquerie('tablet-wide') {
+            font-size: 4rem;
+        }
     }
 
     &__tag {
         font-weight: 300;
         font-size: 1.5rem;
+
+        @include mediaquerie('tablet'){
+            font-size: 2.5rem;
+        }
     }
 }

@@ -5,6 +5,10 @@
         display: none;
     }
 
+    &--opened {
+        overflow: hidden;
+    }
+
     // NAVIGATION BUTTON
     &__button {
         width: 4rem;
@@ -23,8 +27,14 @@
             background-color: $light-brown;
             width: 4.5rem;
             height: 4.5rem;
-            top: -5rem;
+            top: -6rem;
+            right: 3.5rem;
             transition: top .3s;
+        }
+
+        @include mqlandscapeH('600px') {
+            top: 3rem;
+            right: 4rem;
         }
 
         &--show {
@@ -126,7 +136,7 @@
             justify-content: space-around;
             top: 55%;
             left: 50%;
-            font-size: 2.2rem;
+            font-size: 2.3rem;
         }
     }
 
@@ -170,10 +180,19 @@
 
     // Main Menu
     &__main {
+        display: block;
         position: absolute;
-        right: 2.5rem;
+        right: 4rem;
         top: 3.5rem;
         z-index: 40;
+
+        @include mediaquerie('tablet', max) {
+            display: none;
+        }
+
+        @include mqlandscapeH('600px') {
+            display: none;
+        }
 
         &__list {
             text-align: right;
@@ -181,6 +200,10 @@
             line-height: 2.2;
             top: 5vh;
             list-style: none;
+
+            @include mediaquerie('tablet-wide') {
+                font-size: 2.4rem;
+            }
         }
 
         &__link {

@@ -1,36 +1,12 @@
-import $ from 'jquery';
 import Swiper from 'swiper';
 import Modal from './modules/Modal';
 import Readmore from './modules/Readmore';
 import Educacao from './modules/Educacao';
 import Maps from './modules/Maps';
 import GaleriaSlideShow from './modules/GaleriaSlideShow';
-import smoothScroll from 'jquery-smooth-scroll';
 import Menu from './modules/Menu';
 
-// MAIN MENU - ESCONDE MENU QUANDO UM LINK É CLICADO
-var links = document.querySelectorAll('.navigation__link');
-var menuToggle = document.querySelector('.navigation__checkbox');
-var logoMenu = document.querySelector('.logo--menu');
-
-logoMenu.addEventListener('click', function(){
-    menuToggle.checked = false;
-});
-
-links.forEach(function(link){
-    link.addEventListener('click', function(e){
-        menuToggle.checked = false;
-        e.preventDefault();
-       
-        // Activa o Smooth Scroll
-        var that = this;
-        $.smoothScroll({
-            scrollTarget: that.hash,
-            offset: -20
-        });
-    });
-});
-
+// Activa funcionalidades do Menu
 var menu = new Menu();
 
 var megalitismoSlider = new Swiper ('.postais-swiper', {

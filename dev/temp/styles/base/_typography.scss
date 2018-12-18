@@ -57,6 +57,12 @@ body {
     border-bottom: solid 1px $light-brown;
     margin-top: 4rem;
     font-weight: 700;
+
+    @include mqlandscape('phablet'){
+        font-size: 2rem;
+        padding-bottom: .8rem;
+        margin-top: 2.5rem;
+    }
 }
 
 .sub-heading {
@@ -74,6 +80,7 @@ body {
 .paragraph {
     font-size: 1.3rem;
     text-align: justify;
+    letter-spacing: .3px;
 
     &:not(:last-child) {
         margin-bottom: 2.4rem;

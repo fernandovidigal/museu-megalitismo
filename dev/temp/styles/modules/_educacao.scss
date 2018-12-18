@@ -136,6 +136,10 @@
     &__nav {
         width: 70%;
         margin: 4rem auto 0 auto;
+
+        @include mqlandscape('phablet'){
+            margin: 2rem auto 0 auto;
+        }
     }
 
     &__list {
@@ -144,13 +148,29 @@
         align-items: center;
         justify-content: space-between;
         height: 50vh;
+
+        @include mqlandscape('tablet-wide', max){
+            width: 100%;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 0 auto;
+        }
     }
 
     &__item {
         list-style: none;
+
+        @include mqlandscape('phone-wide') {
+            flex-basis: 50%;
+        }
         
         &:not(:last-child) {
-            margin-bottom: 5vh;
+            margin-bottom: 6vh;
+
+            @include mqlandscape('phone-wide') {
+                margin-bottom: 10vh;
+            }
         }
     }
 

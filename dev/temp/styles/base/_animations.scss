@@ -8,6 +8,16 @@
     }
 }
 
+@keyframes scrollphablet {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 2rem);
+    }
+}
+
 @keyframes fingerswipe {
     0% {
         transform: translateX(-70%);

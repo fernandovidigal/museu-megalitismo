@@ -38,6 +38,12 @@ $breakpoints: (
     }
 }
 
+@mixin mqlandscapeH($width) {
+    @media only screen and (max-height: $width) and (orientation: landscape) {
+        @content;
+    }
+}
+
 // USE CASE
 /*
 .site-header {
