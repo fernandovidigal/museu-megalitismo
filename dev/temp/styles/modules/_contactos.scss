@@ -7,18 +7,59 @@
         flex-direction: column;
     }
 
+    &__input-group {
+        position: relative;
+        margin-bottom: 1.9rem;
+    }
+
     &__nome,
     &__email,
     &__message {
+        position: relative;
+        z-index: 1;
+        width: 100%;
         border: solid 1px $dark-brown;
         font-size: 1.5rem;
+        background-color: transparent;
         color: $dark-brown;
         padding: .8rem 1.2rem;
-        margin-bottom: 1.5rem;
 
-        &::placeholder {
+        & + label {
+            position: absolute;
+            top: 10px;
+            left: 4px;
+            font-size: 1.5rem;
+            line-height: 1;
             color: $light-brown;
+            background-color: $white;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            transition: all .2s ease-out;
+            z-index: 0;
         }
+
+        &:focus {
+            outline: none;
+            transition: all .2s ease-out;
+
+            & + label {
+                top: -9px;
+                font-size: 1.2rem;
+                z-index: 1;
+            }
+        }
+
+        &.has-value + label {
+            top: -9px;
+            font-size: 1.2rem;
+            z-index: 1;
+        }
+
+    }
+
+    &__message {
+        resize: vertical;
+        min-height: 18rem;
     }
 
     &__submit {

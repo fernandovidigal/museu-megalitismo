@@ -563,10 +563,19 @@
             <h1 class="heading-primary heading-primary--small" data-section-title="CONTACTE-NOS">CONTACTE-NOS</h1>
             <form action="" method="POST">
                 <div class="contactos__form">
-                    <input class="contactos__nome" type="text" name="nome" placeholder="Nome">
-                    <input class="contactos__email" type="email" name="email" placeholder="Email">
-                    <textarea class="contactos__message" name="message" id="message" cols="30" rows="10" placeholder="Mensagem"></textarea>
-                    <input class="btn btn-secondary contactos__submit" type="submit" value="ENVIAR MESSAGEM" name="submit">
+                    <div class="contactos__input-group">
+                        <input class="contactos__contol contactos__nome" type="text" name="nome">
+                        <label>Nome</label>
+                    </div>
+                    <div class="contactos__input-group">
+                        <input class="contactos__contol contactos__email" type="email" name="email">
+                        <label>Email</label>
+                    </div>
+                    <div class="contactos__input-group">
+                        <textarea class="contactos__contol contactos__message" name="message" id="message" cols="30" rows="10"></textarea>
+                        <label>Mensagem</label>
+                    </div>
+                    <input class="btn btn-secondary contactos__submit" type="submit" value="ENVIAR MENSAGEM" name="submit">
                 </div>
             </form>
         </div>

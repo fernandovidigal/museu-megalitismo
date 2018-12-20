@@ -1772,24 +1772,50 @@ body {
   display: flex;
   flex-direction: column; }
 
+.contactos__input-group {
+  position: relative;
+  margin-bottom: 1.9rem; }
+
 .contactos__nome, .contactos__email, .contactos__message {
+  position: relative;
+  z-index: 1;
+  width: 100%;
   border: solid 1px #60504D;
   font-size: 1.5rem;
+  background-color: transparent;
   color: #60504D;
-  padding: .8rem 1.2rem;
-  margin-bottom: 1.5rem; }
+  padding: .8rem 1.2rem; }
 
-.contactos__nome::-webkit-input-placeholder, .contactos__email::-webkit-input-placeholder, .contactos__message::-webkit-input-placeholder {
-    color: #AE9C8D; }
+.contactos__nome + label, .contactos__email + label, .contactos__message + label {
+    position: absolute;
+    top: 10px;
+    left: 4px;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #AE9C8D;
+    background-color: #FFFFFF;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: all .2s ease-out;
+    z-index: 0; }
 
-.contactos__nome:-ms-input-placeholder, .contactos__email:-ms-input-placeholder, .contactos__message:-ms-input-placeholder {
-    color: #AE9C8D; }
+.contactos__nome:focus, .contactos__email:focus, .contactos__message:focus {
+    outline: none;
+    transition: all .2s ease-out; }
 
-.contactos__nome::-ms-input-placeholder, .contactos__email::-ms-input-placeholder, .contactos__message::-ms-input-placeholder {
-    color: #AE9C8D; }
+.contactos__nome:focus + label, .contactos__email:focus + label, .contactos__message:focus + label {
+      top: -9px;
+      font-size: 1.2rem;
+      z-index: 1; }
 
-.contactos__nome::placeholder, .contactos__email::placeholder, .contactos__message::placeholder {
-    color: #AE9C8D; }
+.contactos__nome.has-value + label, .contactos__email.has-value + label, .contactos__message.has-value + label {
+    top: -9px;
+    font-size: 1.2rem;
+    z-index: 1; }
+
+.contactos__message {
+  resize: vertical;
+  min-height: 18rem; }
 
 .contactos__submit {
   align-self: flex-start; }

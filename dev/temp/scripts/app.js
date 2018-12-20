@@ -5,9 +5,11 @@ import Educacao from './modules/Educacao';
 import Maps from './modules/Maps';
 import GaleriaSlideShow from './modules/GaleriaSlideShow';
 import Menu from './modules/Menu';
+import Contactos from './modules/Contactos';
 
 // Activa funcionalidades do Menu
 var menu = new Menu();
+var contactos = new Contactos();
 
 var megalitismoSlider = new Swiper ('.postais-swiper', {
     loop: true,
