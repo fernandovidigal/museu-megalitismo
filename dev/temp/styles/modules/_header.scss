@@ -16,7 +16,27 @@
         background-image: url(../images/DSC_5433.jpg);
         background-position: 70% 100%;
         background-size: cover;
-    } 
+    }
+
+    &__text-box {
+        position: absolute;
+        bottom: 13rem;
+        left: 2.5rem;
+        width: 28rem;
+        display: none;
+
+        @include mediaquerie('tablet'){
+            display: block;
+        }
+
+        @include mediaquerie('desktop'){
+            width: 33.5rem;
+        }
+    }
+
+    &__missao {
+        margin-bottom: 2rem;
+    }
 
     &__btn-box {
         display: none !important;
@@ -65,7 +85,7 @@
 .scroll-icon {
     width: 2.5rem;
     height: 4.5rem;
-    bottom: 8vh;
+    bottom: 11vh;
     margin-top: -35px;
     box-shadow: inset 0 0 0 1px $white;
     border-radius: 25px;

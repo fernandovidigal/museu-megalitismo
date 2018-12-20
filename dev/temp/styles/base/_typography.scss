@@ -71,6 +71,11 @@ body {
     color: $light-brown;
 }
 
+.sub-heading--secondary {
+    font-size: 1.4rem;
+    color: $white;
+}
+
 .heading-postais {
     font-size: 1.8rem;
     margin-bottom: 2.4rem;
@@ -89,6 +94,12 @@ body {
     &__strong {
         font-weight: 700;
     }
+}
+
+.paragraph--small {
+    color: $light-grey;
+    font-weight: 300;
+    font-size: .94rem;
 }
 
 .extraInfo-small {
