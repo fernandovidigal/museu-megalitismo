@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Museu Interactivo do Megalitismo</title>
     <link href="https://fonts.googleapis.com/css?family=Dosis:300,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="assets/styles/styles-cb9a55d3cb.css"/>
+    <link rel="stylesheet" href="assets/styles/styles-f38baeb94b.css"/>
     <script src="assets/scripts/Vendor-ee30c0f0f6.js"></script>
 </head>
 <body>
@@ -58,8 +58,19 @@
             <img src="assets/images/logo.svg" class="logo" alt="Logotipo Museu Interactivo do Megalitismo">
         </div>
 
+        <div class="header__text-box">
+            <div class="header__missao">
+                <h6 class="sub-heading--secondary">Missão</h6>
+                <p class="paragraph--small">A missão do Museu Interactivo do Megalitismo consiste na valorização e divulgação do património megalítico do Concelho de Mora e na afirmação da memória histórico-cultural do seu povo.</p>
+            </div>
+            <div class="header__visao">
+                <h6 class="sub-heading--secondary">Visão</h6>
+                <p class="paragraph--small">Através da valorização e divulgação do nosso património megalítico, o Museu Interactivo do Megalitismo pretende contribuir para o enriquecimento social, cultural e económico do Concelho de Mora, e para a sua afirmação como referência nacional e internacional do megalitismo.</p>
+            </div>
+        </div>
+
         <div class="btn-box header__btn-box">
-            <a href="" class="btn btn-tertiary u-margin-left-xs">VER FILME PROMOCIONAL DO CONCELHO <span class="icon icon--video-camera--grey u-margin-left-s"></span></a>
+            <a href="" class="btn btn-tertiary">VER FILME PROMOCIONAL DO CONCELHO <span class="icon icon--video-camera--brown"></span></a>
         </div>
         <div class="scroll-icon"></div>
     </header>
@@ -559,10 +570,19 @@
             <h1 class="heading-primary heading-primary--small" data-section-title="CONTACTE-NOS">CONTACTE-NOS</h1>
             <form action="" method="POST">
                 <div class="contactos__form">
-                    <input class="contactos__nome" type="text" name="nome" placeholder="Nome">
-                    <input class="contactos__email" type="email" name="email" placeholder="Email">
-                    <textarea class="contactos__message" name="message" id="message" cols="30" rows="10" placeholder="Mensagem"></textarea>
-                    <input class="btn btn-secondary contactos__submit" type="submit" value="ENVIAR MESSAGEM" name="submit">
+                    <div class="contactos__input-group">
+                        <input class="contactos__contol contactos__nome" type="text" name="nome">
+                        <label>Nome</label>
+                    </div>
+                    <div class="contactos__input-group">
+                        <input class="contactos__contol contactos__email" type="email" name="email">
+                        <label>Email</label>
+                    </div>
+                    <div class="contactos__input-group">
+                        <textarea class="contactos__contol contactos__message" name="message" id="message" cols="30" rows="10"></textarea>
+                        <label>Mensagem</label>
+                    </div>
+                    <input class="btn btn-secondary contactos__submit" type="submit" value="ENVIAR MENSAGEM" name="submit">
                 </div>
             </form>
         </div>
@@ -597,6 +617,6 @@
     <script defer async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4sciudjQxavw9NnmO7iHR-HFJ3QK1cIw">
     </script>
-    <script src="assets/scripts/App-70dbcc4b3a.js"></script>
+    <script src="assets/scripts/App-cff79c4283.js"></script>
 </body>
 </html>

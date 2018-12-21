@@ -5,15 +5,19 @@
     height: 1.7rem;
 
     @include mediaquerie('tablet'){
-        width: 1.8rem;
-        height: 1.6rem;
+        width: 2rem;
+        height: 1rem;
     }
 
     &--video-camera {
         background-image: url(../images/icons/video-camera.svg);
         
-        &--grey {
-            background-image: url(../images/icons/video-camera-grey.svg);
+        &--brown {
+            background-image: url(../images/icons/video-camera-brown.svg);
+
+            @include mediaquerie('tablet'){
+                margin-left: 1.2rem;
+            }
         }
     }
 

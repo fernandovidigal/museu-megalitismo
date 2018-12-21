@@ -74,6 +74,7 @@ body {
 .sub-heading--secondary {
     font-size: 1.4rem;
     color: $white;
+    margin-bottom: .3rem;
 }
 
 .heading-postais {
@@ -99,7 +100,11 @@ body {
 .paragraph--small {
     color: $light-grey;
     font-weight: 300;
-    font-size: .94rem;
+    font-size: 1rem;
+
+    @include mediaquerie('desktop-wide'){
+        font-size: .94rem;
+    }
 }
 
 .extraInfo-small {

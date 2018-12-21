@@ -21,8 +21,16 @@ html {
     @include mediaquerie('tablet-wide') {
         font-size: 90%; //12,8px    
     }
+
+    @include mediaquerie('desktop') {
+        font-size: 100%; //16px    
+    }
 }
 
 body {
     box-sizing: border-box;
+}
+
+a {
+    display: inline-block;
 }
