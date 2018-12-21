@@ -1,13 +1,14 @@
 .icon {
+    // Ratio 1.62
     background-repeat: no-repeat;
     display: inline-block;
-    width: 1.6rem;
-    height: 1.7rem;
+    width: 1.62rem;
+    height: 1rem;
 
-    @include mediaquerie('tablet'){
+    /*@include mediaquerie('tablet'){
         width: 2rem;
         height: 1rem;
-    }
+    }*/
 
     &--video-camera {
         background-image: url(../images/icons/video-camera.svg);

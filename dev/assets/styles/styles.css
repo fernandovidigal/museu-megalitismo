@@ -683,17 +683,17 @@ html {
 
 @media only screen and (min-width: 560px) {
     html {
-      font-size: 70%; } }
+      font-size: 75%; } }
 
 @media only screen and (min-width: 768px) {
     html {
-      font-size: 80%; } }
+      font-size: 81.25%; } }
 
 @media only screen and (min-width: 1024px) {
     html {
-      font-size: 90%; } }
+      font-size: 87.5%; } }
 
-@media only screen and (min-width: 1248px) {
+@media only screen and (min-width: 1440px) {
     html {
       font-size: 100%; } }
 
@@ -1228,13 +1228,29 @@ a {
     .wrapper {
       padding: 5rem 2.2rem; } }
 
+@media only screen and (min-width: 560px) {
+    .wrapper {
+      padding: 5rem 2.5rem; } }
+
 @media only screen and (min-width: 640px) {
     .wrapper {
-      padding: 5rem 3rem; } }
+      padding: 5rem 4rem; } }
+
+@media only screen and (min-width: 768px) {
+    .wrapper {
+      padding: 5rem 6rem; } }
 
 @media only screen and (min-width: 1024px) {
     .wrapper {
-      padding: 5rem 7rem; } }
+      padding: 5rem 9rem; } }
+
+@media only screen and (min-width: 1248px) {
+    .wrapper {
+      padding: 5rem 3.5vw; } }
+
+@media only screen and (min-width: 1440px) {
+    .wrapper {
+      padding: 5rem 5rem; } }
 
 .page-section {
   padding: 5rem 0 5rem 0; }
@@ -1246,7 +1262,7 @@ a {
   height: 3rem;
   padding: 0 2rem;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: .9rem;
   letter-spacing: .2px;
   /*@include mediaquerie('tablet'){
         font-size: 1rem;
@@ -1290,13 +1306,12 @@ a {
 .icon {
   background-repeat: no-repeat;
   display: inline-block;
-  width: 1.6rem;
-  height: 1.7rem; }
-
-@media only screen and (min-width: 768px) {
-    .icon {
-      width: 2rem;
-      height: 1rem; } }
+  width: 1.62rem;
+  height: 1rem;
+  /*@include mediaquerie('tablet'){
+        width: 2rem;
+        height: 1rem;
+    }*/ }
 
 .icon--video-camera {
     background-image: url(../images/icons/video-camera.svg); }
@@ -1394,10 +1409,81 @@ a {
 .loader:after {
   left: 3rem; }
 
+.museu {
+  position: relative;
+  overflow: hidden; }
+
+.museu__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+
+.museu__text-content {
+    width: 100%; }
+
+@media only screen and (min-width: 1248px) {
+      .museu__text-content {
+        width: 50.48vw;
+        min-width: 45rem;
+        max-width: 47.5rem; } }
+
+@media only screen and (min-width: 1440px) {
+      .museu__text-content {
+        width: 44vw;
+        min-width: 40rem; } }
+
+.museu__image {
+    width: 35.9vw;
+    min-width: 32rem;
+    max-width: 43.125rem;
+    margin-top: 4rem;
+    box-shadow: -15px 15px 0 0 rgba(0, 0, 0, 0.2); }
+
+@media only screen and (max-width: 1247px) {
+      .museu__image {
+        display: none; } }
+
 .museu__complete-content {
-  height: 0;
-  overflow: hidden;
-  transition: height .3s; }
+    height: 0;
+    overflow: hidden;
+    transition: height .3s; }
+
+.museu__triangle {
+    display: none; }
+
+@media only screen and (min-width: 1248px) {
+      .museu__triangle {
+        display: block;
+        width: 1920px;
+        height: 1920px;
+        position: absolute;
+        z-index: -1;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); } }
+
+.museu__triangle--grey {
+      background-color: rgba(235, 236, 231, 0.3);
+      top: -50%;
+      right: 60%; }
+
+@media only screen and (min-width: 1440px) {
+        .museu__triangle--grey {
+          top: -38%;
+          right: 55%; } }
+
+@media only screen and (min-width: 1560px) {
+        .museu__triangle--grey {
+          top: -35%; } }
+
+@media only screen and (min-width: 1730px) {
+        .museu__triangle--grey {
+          top: -28%;
+          right: 50%; } }
+
+.museu__triangle--brown {
+      background-color: rgba(174, 156, 141, 0.3);
+      top: 8%;
+      left: 90%; }
 
 .valencias {
   display: flex;

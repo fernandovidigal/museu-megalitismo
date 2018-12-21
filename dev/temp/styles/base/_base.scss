@@ -11,18 +11,18 @@ html {
     font-size: 62.5%; // 1 rem = 10px ===> 10px/16px = 62.5%
 
     @include mediaquerie('phablet') {
-        font-size: 70%; //11,2px   
+        font-size: 75%; //12px   
     }
 
     @include mediaquerie('tablet') {
-        font-size: 80%; //12,8px    
+        font-size: 81.25%; //13px    
     }
 
     @include mediaquerie('tablet-wide') {
-        font-size: 90%; //12,8px    
+        font-size: 87.5%; //14px    
     }
 
-    @include mediaquerie('desktop') {
+    @include mediaquerie('desktop-wide') {
         font-size: 100%; //16px    
     }
 }

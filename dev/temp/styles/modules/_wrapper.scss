@@ -9,11 +9,27 @@
         padding: 5rem 2.2rem;
     }
 
+    @include mediaquerie('phablet'){
+        padding: 5rem 2.5rem;
+    }
+
     @include mediaquerie('tablet-small'){
-        padding: 5rem 3rem;
+        padding: 5rem 4rem;
+    }
+
+    @include mediaquerie('tablet'){
+        padding: 5rem 6rem;
     }
 
     @include mediaquerie('tablet-wide') {
-        padding: 5rem 7rem;
+        padding: 5rem 9rem;
+    }
+
+    @include mediaquerie('desktop') {
+        padding: 5rem 3.5vw;
+    }
+
+    @include mediaquerie('desktop-wide') {
+        padding: 5rem 5rem;
     }
 }

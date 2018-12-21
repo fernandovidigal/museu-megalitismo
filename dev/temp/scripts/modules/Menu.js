@@ -55,8 +55,7 @@ class Menu {
 
     showMenuAfterHeader(){
         if(!this.isMobile) {
-            var scrollTopOffset = window.pageYOffset;
-            if(scrollTopOffset > this.headerHeight) {
+            if(window.pageYOffset > this.headerHeight) {
                 this.navigationBtn.classList.add('navigation__button--show');
             } else {
                 this.navigationBtn.classList.remove('navigation__button--show');
