@@ -211,9 +211,9 @@
             display: none;
         }
 
-        @include mqlandscapeH('600px') {
+        /*@include mqlandscapeH('600px') {
             display: none;
-        }
+        }*/
 
         @include mediaquerie('tablet-wide') {
             width: 23rem;
@@ -227,9 +227,11 @@
             width: 100%;
             text-align: right;
             font-size: 2.6rem;
-            line-height: 2;
             top: 5vh;
+            line-height: 1;
             list-style: none;
+
+
 
             @include mediaquerie('tablet-wide') {
                 font-size: 2.4rem;
@@ -242,9 +244,55 @@
 
         &__item {
             width: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: 2.5rem;
+            }
         }
 
         &__link {
+            &:link,
+            &:visited {
+                text-decoration: none;
+                color: $white;
+                cursor: pointer;
+                margin-right: 3rem;
+                position: relative;
+                transform: translateY(0%);
+                transition: all .25s;
+
+                @include mediaquerie('desktop') {
+                    margin-right: 4rem;
+                }
+
+                @include mediaquerie('desktop-wide') {
+                    margin-right: 5.6rem;
+                }
+            }
+
+            &:hover {
+                color: #C9AA5D;
+            }
+
+            &::before {
+                content: attr(data-menuitem);
+                white-space: nowrap;
+                position: absolute;
+                bottom: -50%;
+                right: 0;
+                color: rgba($light-grey, .075);
+                font-size: 6rem;
+                font-weight: 500;
+                z-index: -1;
+                display: none;
+            }
+
+            &:hover::before{
+                display: block;
+            }
+        }
+
+        /*&__link {
             &:link,
             &:visited {
                 display: block;
@@ -269,6 +317,6 @@
             &:hover {
                 background-position: 100%;
             }
-        }
+        }*/
     }
 }
