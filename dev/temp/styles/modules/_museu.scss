@@ -12,28 +12,36 @@
         width: 100%;
 
         @include mediaquerie('desktop') {
-            width: 50.48vw;
-            min-width: 45rem;
-            max-width: 47.5rem;
+            width: 46vw;
         }
 
-        @include mediaquerie('desktop-wide') {
-            width: 44vw;
+        /*@include mediaquerie('desktop-wide') {
+            width: 42.5rem;
             min-width: 40rem;
-        }
+            max-width: 45rem;
+        }*/
     }
 
-    &__image {
-        //width: 32rem;
-        width: 35.9vw;
-        min-width: 32rem; // 448px
-        max-width: 43.125rem; // 690px
-        margin-top: 4rem;
-        box-shadow: -15px 15px 0 0 rgba($black, .2);
+    &__image-content {
+        width: 29vw;
+        margin-top: 8rem;
 
         @include mediaquerie('desktop', max) {
             display: none;
         }
+
+        /*@include mediaquerie('desktop-wide') {
+            min-width: 30rem;
+            max-width: 35rem;
+        }*/
+    }
+
+    &__image {
+        width: 100%;
+        display: block;
+        box-shadow: -15px 15px 0 0 rgba($black, .2);
+
+        
     }
 
     &__complete-content {

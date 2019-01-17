@@ -1009,32 +1009,6 @@ a {
     z-index: 40;
     /*@include mqlandscapeH('600px') {
             display: none;
-        }*/
-    /*&__link {
-            &:link,
-            &:visited {
-                display: block;
-                text-decoration: none;
-                color: $white;
-                cursor: pointer;
-                padding-right: 3rem;
-                position: relative;
-                background-image: linear-gradient(45deg, transparent 0%, transparent 50%, rgba($mainNavHover, .7) 50%);
-                background-size: 230%;
-                transition: all .6s;
-
-                @include mediaquerie('desktop') {
-                    padding-right: 4rem;
-                }
-
-                @include mediaquerie('desktop-wide') {
-                    padding-right: 5.6rem;
-                }
-            }
-
-            &:hover {
-                background-position: 100%;
-            }
         }*/ }
 
 @media only screen and (max-width: 767px) {
@@ -1096,16 +1070,18 @@ a {
       content: attr(data-menuitem);
       white-space: nowrap;
       position: absolute;
-      bottom: -50%;
+      bottom: -70%;
       right: 0;
-      color: rgba(235, 236, 231, 0.075);
+      color: rgba(235, 236, 231, 0.06);
       font-size: 6rem;
       font-weight: 500;
       z-index: -1;
-      display: none; }
+      opacity: 0;
+      transition: all .5s; }
 
 .navigation__main__link:hover::before {
-      display: block; }
+      opacity: 1;
+      bottom: -50%; }
 
 .header {
   width: 100%;
@@ -1280,7 +1256,7 @@ a {
 
 @media only screen and (min-width: 768px) {
     .wrapper {
-      padding: 5rem 6rem; } }
+      padding: 5rem 8rem; } }
 
 @media only screen and (min-width: 1024px) {
     .wrapper {
@@ -1288,11 +1264,11 @@ a {
 
 @media only screen and (min-width: 1248px) {
     .wrapper {
-      padding: 5rem 3.5vw; } }
+      padding: 5rem 4.5vw; } }
 
 @media only screen and (min-width: 1440px) {
     .wrapper {
-      padding: 5rem 5rem; } }
+      padding: 5rem 6vw; } }
 
 .page-section {
   padding: 5rem 0 5rem 0; }
@@ -1457,29 +1433,33 @@ a {
     align-items: flex-start; }
 
 .museu__text-content {
-    width: 100%; }
+    width: 100%;
+    /*@include mediaquerie('desktop-wide') {
+            width: 42.5rem;
+            min-width: 40rem;
+            max-width: 45rem;
+        }*/ }
 
 @media only screen and (min-width: 1248px) {
       .museu__text-content {
-        width: 50.48vw;
-        min-width: 45rem;
-        max-width: 47.5rem; } }
+        width: 46vw; } }
 
-@media only screen and (min-width: 1440px) {
-      .museu__text-content {
-        width: 44vw;
-        min-width: 40rem; } }
-
-.museu__image {
-    width: 35.9vw;
-    min-width: 32rem;
-    max-width: 43.125rem;
-    margin-top: 4rem;
-    box-shadow: -15px 15px 0 0 rgba(0, 0, 0, 0.2); }
+.museu__image-content {
+    width: 29vw;
+    margin-top: 8rem;
+    /*@include mediaquerie('desktop-wide') {
+            min-width: 30rem;
+            max-width: 35rem;
+        }*/ }
 
 @media only screen and (max-width: 1247px) {
-      .museu__image {
+      .museu__image-content {
         display: none; } }
+
+.museu__image {
+    width: 100%;
+    display: block;
+    box-shadow: -15px 15px 0 0 rgba(0, 0, 0, 0.2); }
 
 .museu__complete-content {
     height: 0;
@@ -1608,6 +1588,41 @@ a {
   position: relative;
   overflow: hidden; }
 
+.megalitismo__content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start; }
+
+.megalitismo__text-content {
+    width: 100%; }
+
+@media only screen and (min-width: 1248px) {
+      .megalitismo__text-content {
+        width: 50vw; } }
+
+.megalitismo__image-content {
+    width: 32vw;
+    position: relative;
+    margin-top: 8rem; }
+
+@media only screen and (max-width: 1247px) {
+      .megalitismo__image-content {
+        display: none; } }
+
+.megalitismo__image {
+    width: 100%;
+    display: block;
+    box-shadow: 15px 15px 0 0 rgba(0, 0, 0, 0.1); }
+
+.megalitismo__image-small {
+      width: 20vw; }
+
+.megalitismo__image-overlap {
+      position: absolute;
+      bottom: -70%;
+      right: 10%; }
+
 .megalitismo__complete-content {
     height: 0;
     overflow: hidden;
@@ -1622,7 +1637,8 @@ a {
   height: 253rem;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  z-index: -1; }
+  z-index: -1;
+  display: none; }
 
 @media only screen and (min-width: 1024px) {
     .triangle {

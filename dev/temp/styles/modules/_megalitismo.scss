@@ -2,6 +2,47 @@
     position: relative;
     overflow: hidden;
 
+    &__content {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__text-content {
+        width: 100%;
+
+        @include mediaquerie("desktop"){
+            width: 50vw;
+        }
+    }
+
+    &__image-content {
+        width: 32vw;
+        position: relative;
+        margin-top: 8rem;
+
+        @include mediaquerie("desktop", max) {
+            display: none;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        display: block;
+        box-shadow: 15px 15px 0 0 rgba($black, .1);
+
+        &-small {
+            width: 20vw;
+        }
+
+        &-overlap {
+            position: absolute;
+            bottom: -70%;
+            right: 10%;
+        }
+    }
+
     &__complete-content {
         height: 0;
         overflow: hidden;
@@ -18,6 +59,8 @@
     height: 253rem;
     transform: rotate(45deg);
     z-index: -1;
+
+    display: none;
 
     @include mediaquerie('tablet-wide') {
         top: -110%;

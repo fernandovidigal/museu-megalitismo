@@ -18,7 +18,7 @@
     }
 
     @include mediaquerie('tablet'){
-        padding: 5rem 6rem;
+        padding: 5rem 8rem;
     }
 
     @include mediaquerie('tablet-wide') {
@@ -26,10 +26,10 @@
     }
 
     @include mediaquerie('desktop') {
-        padding: 5rem 3.5vw;
+        padding: 5rem 4.5vw;
     }
 
     @include mediaquerie('desktop-wide') {
-        padding: 5rem 5rem;
+        padding: 5rem 6vw;
     }
 }
