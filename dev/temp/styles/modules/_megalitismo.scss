@@ -5,7 +5,7 @@
     &__content {
         display: flex;
         flex-direction: row-reverse;
-        justify-content: space-between;
+        justify-content: center;
         align-items: flex-start;
     }
 
@@ -13,12 +13,18 @@
         width: 100%;
 
         @include mediaquerie("desktop"){
-            width: 50vw;
+            width: 45vw;
+            margin-left: 6.5vw;
+        }
+
+        @include mediaquerie("desktop-wide"){
+            width: 40vw;
+            margin-left: 11vw;
         }
     }
 
     &__image-content {
-        width: 32vw;
+        width: 36vw;
         position: relative;
         margin-top: 8rem;
 
@@ -31,15 +37,40 @@
         width: 100%;
         display: block;
         box-shadow: 15px 15px 0 0 rgba($black, .1);
+        position: relative;
+        z-index: 5;
+        transform: scale(1);
+        transition: all .3s;
 
-        &-small {
-            width: 20vw;
+        &:first-child {
+            animation-duration: 1.2s;
+            animation-name: imageToFrontOut;
+            animation-timing-function: ease-in-out;
+
+            &:hover {
+                animation-duration: 1.2s;
+                animation-fill-mode: forwards;
+                animation-name: imageToFrontIn;
+                animation-timing-function: ease-in-out;
+            }
         }
 
-        &-overlap {
+        &--small {
+            width: 20vw;
+            transform: scale(1);
+            transition: all .3s;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 10px 10px 2px 0 rgba($black, .1);
+            }
+        }
+
+        &--overlap {
             position: absolute;
-            bottom: -70%;
+            bottom: -65%;
             right: 10%;
+            z-index: 10;
         }
     }
 

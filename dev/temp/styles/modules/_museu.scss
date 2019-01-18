@@ -4,7 +4,7 @@
 
     &__content {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: flex-start;
     }
 
@@ -12,36 +12,32 @@
         width: 100%;
 
         @include mediaquerie('desktop') {
-            width: 46vw;
+            width: 42vw;
+            max-width: 730px;
+            margin-right: 6.5vw;
         }
 
-        /*@include mediaquerie('desktop-wide') {
-            width: 42.5rem;
-            min-width: 40rem;
-            max-width: 45rem;
-        }*/
+        @include mediaquerie('desktop-wide') {
+            width: 38vw;
+            max-width: 730px;
+            margin-right: 11.4vw;
+        }
     }
 
     &__image-content {
-        width: 29vw;
+        width: 36vw;
+        max-width: 690px;
         margin-top: 8rem;
 
         @include mediaquerie('desktop', max) {
             display: none;
         }
-
-        /*@include mediaquerie('desktop-wide') {
-            min-width: 30rem;
-            max-width: 35rem;
-        }*/
     }
 
     &__image {
         width: 100%;
         display: block;
-        box-shadow: -15px 15px 0 0 rgba($black, .2);
-
-        
+        box-shadow: -15px 15px 0 0 rgba($black, .2); 
     }
 
     &__complete-content {

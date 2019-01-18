@@ -824,6 +824,74 @@ a {
   40% {
     box-shadow: 0 2.5em 0 0; } }
 
+@-webkit-keyframes imageToFrontIn {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    z-index: 5;
+    box-shadow: 15px 15px 0 0 rgba(0, 0, 0, 0.1); }
+  50% {
+    -webkit-transform: translate(8%, -15%) scale(1);
+            transform: translate(8%, -15%) scale(1);
+    z-index: 10;
+    box-shadow: 8px 35px 10px 0 rgba(0, 0, 0, 0.05); }
+  100% {
+    -webkit-transform: translate(0, 0) scale(1.1);
+            transform: translate(0, 0) scale(1.1);
+    z-index: 15;
+    box-shadow: 10px 10px 2px 0 rgba(0, 0, 0, 0.1); } }
+
+@keyframes imageToFrontIn {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    z-index: 5;
+    box-shadow: 15px 15px 0 0 rgba(0, 0, 0, 0.1); }
+  50% {
+    -webkit-transform: translate(8%, -15%) scale(1);
+            transform: translate(8%, -15%) scale(1);
+    z-index: 10;
+    box-shadow: 8px 35px 10px 0 rgba(0, 0, 0, 0.05); }
+  100% {
+    -webkit-transform: translate(0, 0) scale(1.1);
+            transform: translate(0, 0) scale(1.1);
+    z-index: 15;
+    box-shadow: 10px 10px 2px 0 rgba(0, 0, 0, 0.1); } }
+
+@-webkit-keyframes imageToFrontOut {
+  0% {
+    -webkit-transform: translate(0, 0) scale(1.1);
+            transform: translate(0, 0) scale(1.1);
+    z-index: 15;
+    box-shadow: 10px 10px 2px 0 rgba(0, 0, 0, 0.1); }
+  50% {
+    -webkit-transform: translate(8%, -15%) scale(1);
+            transform: translate(8%, -15%) scale(1);
+    z-index: 10;
+    box-shadow: 8px 35px 10px 0 rgba(0, 0, 0, 0.05); }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    z-index: 5;
+    box-shadow: 15px 15px 0 0 rgba(0, 0, 0, 0.1); } }
+
+@keyframes imageToFrontOut {
+  0% {
+    -webkit-transform: translate(0, 0) scale(1.1);
+            transform: translate(0, 0) scale(1.1);
+    z-index: 15;
+    box-shadow: 10px 10px 2px 0 rgba(0, 0, 0, 0.1); }
+  50% {
+    -webkit-transform: translate(8%, -15%) scale(1);
+            transform: translate(8%, -15%) scale(1);
+    z-index: 10;
+    box-shadow: 8px 35px 10px 0 rgba(0, 0, 0, 0.05); }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    z-index: 5;
+    box-shadow: 15px 15px 0 0 rgba(0, 0, 0, 0.1); } }
+
 .navigation {
   position: relative; }
 
@@ -1005,7 +1073,7 @@ a {
     position: absolute;
     width: 18rem;
     right: 0;
-    top: 3.5rem;
+    top: 6rem;
     z-index: 40;
     /*@include mqlandscapeH('600px') {
             display: none;
@@ -1077,7 +1145,8 @@ a {
       font-weight: 500;
       z-index: -1;
       opacity: 0;
-      transition: all .5s; }
+      transition: all .5s;
+      pointer-events: none; }
 
 .navigation__main__link:hover::before {
       opacity: 1;
@@ -1429,28 +1498,28 @@ a {
 
 .museu__content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start; }
 
 .museu__text-content {
-    width: 100%;
-    /*@include mediaquerie('desktop-wide') {
-            width: 42.5rem;
-            min-width: 40rem;
-            max-width: 45rem;
-        }*/ }
+    width: 100%; }
 
 @media only screen and (min-width: 1248px) {
       .museu__text-content {
-        width: 46vw; } }
+        width: 42vw;
+        max-width: 730px;
+        margin-right: 6.5vw; } }
+
+@media only screen and (min-width: 1440px) {
+      .museu__text-content {
+        width: 38vw;
+        max-width: 730px;
+        margin-right: 11.4vw; } }
 
 .museu__image-content {
-    width: 29vw;
-    margin-top: 8rem;
-    /*@include mediaquerie('desktop-wide') {
-            min-width: 30rem;
-            max-width: 35rem;
-        }*/ }
+    width: 36vw;
+    max-width: 690px;
+    margin-top: 8rem; }
 
 @media only screen and (max-width: 1247px) {
       .museu__image-content {
@@ -1516,7 +1585,8 @@ a {
 
 @media only screen and (min-width: 1024px) {
       .valencias__item {
-        width: 25vw; } }
+        width: 25vw;
+        height: 330px; } }
 
 .valencias__image {
     width: 100%;
@@ -1591,7 +1661,7 @@ a {
 .megalitismo__content {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start; }
 
 .megalitismo__text-content {
@@ -1599,10 +1669,16 @@ a {
 
 @media only screen and (min-width: 1248px) {
       .megalitismo__text-content {
-        width: 50vw; } }
+        width: 45vw;
+        margin-left: 6.5vw; } }
+
+@media only screen and (min-width: 1440px) {
+      .megalitismo__text-content {
+        width: 40vw;
+        margin-left: 11vw; } }
 
 .megalitismo__image-content {
-    width: 32vw;
+    width: 36vw;
     position: relative;
     margin-top: 8rem; }
 
@@ -1613,15 +1689,47 @@ a {
 .megalitismo__image {
     width: 100%;
     display: block;
-    box-shadow: 15px 15px 0 0 rgba(0, 0, 0, 0.1); }
+    box-shadow: 15px 15px 0 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 5;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    transition: all .3s; }
 
-.megalitismo__image-small {
-      width: 20vw; }
+.megalitismo__image:first-child {
+      -webkit-animation-duration: 1.2s;
+              animation-duration: 1.2s;
+      -webkit-animation-name: imageToFrontOut;
+              animation-name: imageToFrontOut;
+      -webkit-animation-timing-function: ease-in-out;
+              animation-timing-function: ease-in-out; }
 
-.megalitismo__image-overlap {
+.megalitismo__image:first-child:hover {
+        -webkit-animation-duration: 1.2s;
+                animation-duration: 1.2s;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-name: imageToFrontIn;
+                animation-name: imageToFrontIn;
+        -webkit-animation-timing-function: ease-in-out;
+                animation-timing-function: ease-in-out; }
+
+.megalitismo__image--small {
+      width: 20vw;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      transition: all .3s; }
+
+.megalitismo__image--small:hover {
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+        box-shadow: 10px 10px 2px 0 rgba(0, 0, 0, 0.1); }
+
+.megalitismo__image--overlap {
       position: absolute;
-      bottom: -70%;
-      right: 10%; }
+      bottom: -65%;
+      right: 10%;
+      z-index: 10; }
 
 .megalitismo__complete-content {
     height: 0;

@@ -40,3 +40,39 @@
         box-shadow: 0 2.5em 0 0;
     }
 }
+
+@keyframes imageToFrontIn {
+    0% {
+        transform: translate(0,0);
+        z-index: 5;
+        box-shadow: 15px 15px 0 0 rgba($black, .1);
+    }
+    50% {
+        transform: translate(8%, -15%) scale(1);
+        z-index: 10;
+        box-shadow: 8px 35px 10px 0 rgba($black, .05);
+    }
+    100% {
+        transform: translate(0,0) scale(1.1);
+        z-index: 15;
+        box-shadow: 10px 10px 2px 0 rgba($black, .1);
+    }
+}
+
+@keyframes imageToFrontOut {
+    0% {
+        transform: translate(0,0) scale(1.1);
+        z-index: 15;
+        box-shadow: 10px 10px 2px 0 rgba($black, .1);
+    }
+    50% {
+        transform: translate(8%, -15%) scale(1);
+        z-index: 10;
+        box-shadow: 8px 35px 10px 0 rgba($black, .05);
+    }
+    100% {
+        transform: translate(0,0);
+        z-index: 5;
+        box-shadow: 15px 15px 0 0 rgba($black, .1);
+    }
+}
