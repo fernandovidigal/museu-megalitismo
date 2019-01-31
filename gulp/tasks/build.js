@@ -20,7 +20,7 @@ gulp.task('resetAppFolder', function(){
     return del('./app');
 });
 
-gulp.task('copyGeneralFiles', ['resetAppFolder'], function(){
+gulp.task('copyGeneralFiles', gulp.series('resetAppFolder', function(){
     var pathsToCopy = [
         './dev/**/*',
         '!./dev/index.html',
@@ -32,9 +32,9 @@ gulp.task('copyGeneralFiles', ['resetAppFolder'], function(){
     ];
     return gulp.src(pathsToCopy)
         .pipe(gulp.dest('./app'));
-});
+}));
 
-gulp.task('optimizeImages', ['resetAppFolder'], function(){
+gulp.task('optimizeImages', gulp.series('resetAppFolder', function(){
     return gulp.src('./dev/assets/images/**/*')
         .pipe(imagemin({
             progressive: true,
@@ -42,19 +42,19 @@ gulp.task('optimizeImages', ['resetAppFolder'], function(){
             multipass: true
         }))
         .pipe(gulp.dest('./app/assets/images'));
-});
+}));
 
-gulp.task('useminTrigger', ['resetAppFolder'], function(){
+gulp.task('useminTrigger', gulp.series('resetAppFolder', function(){
     gulp.start('usemin');
-});
+}));
 
-gulp.task('usemin', ['styles', 'scripts'], function(){
+gulp.task('usemin', gulp.series(gulp.parallel('styles', 'scripts'), function(){
     return gulp.src('./dev/index.html')
         .pipe(usemin({
             css: [function(){ return rev()}, function(){ return cssnano()}],
             js: [function(){ return rev()}, function(){ return uglify()}],
         }))
         .pipe(gulp.dest('./app'));
-});
+}));
 
-gulp.task('build', ['resetAppFolder', 'copyGeneralFiles', 'optimizeImages', 'useminTrigger']);
+gulp.task('build', gulp.series('resetAppFolder', 'copyGeneralFiles', 'optimizeImages', 'useminTrigger'));

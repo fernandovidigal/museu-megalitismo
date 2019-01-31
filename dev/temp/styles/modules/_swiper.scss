@@ -12,5 +12,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 90%;
+
+        &-active {
+            box-shadow: 0 1rem 3rem rgba($black, .15);
+            backface-visibility: hidden;
+            border-radius: 3px;
+        }
     }
 }

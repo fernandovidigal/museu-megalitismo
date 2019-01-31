@@ -13,6 +13,9 @@ var contactos = new Contactos();
 
 var megalitismoSlider = new Swiper ('.postais-swiper', {
     loop: true,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 10,
     on: {
         click: function(){
             var activeSlider = megalitismoSlider.slides[megalitismoSlider.activeIndex];

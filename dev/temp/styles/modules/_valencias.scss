@@ -10,7 +10,7 @@
         overflow: hidden;
 
         @include mediaquerie("tablet-wide"){
-            width: 25vw;
+            width: 25%;
             height: 330px;
         }
     }
