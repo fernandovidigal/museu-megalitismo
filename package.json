@@ -4,7 +4,7 @@
   "description": "Museu Interactivo do Megalitismo",
   "author": "Fernando Vidigal",
   "dependencies": {
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "jquery-smooth-scroll": "^2.2.0",
     "normalize.css": "^8.0.1",
     "swiper": "^4.4.2"
@@ -14,7 +14,7 @@
     "@babel/preset-env": "^7.1.6",
     "autoprefixer": "^9.3.1",
     "babel-loader": "^8.0.4",
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.7",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-cssnano": "^2.1.3",
